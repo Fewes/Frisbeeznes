@@ -1,0 +1,33 @@
+<div class="col-lg-12 form-group form-inline">
+ <label for="location">Välj plats:</label>
+ <select id="location" class="form-control" ng-model="location" ng-change="changeLocation()">
+  <option value="campus-nkpg">Campus Norrköping</option>
+  <option value="campus-valla">Campus Valla</option>
+ </select>
+</div>
+
+<div class="col-lg-12" ng-if="model.forecast[0]">
+  <div class="panel panel-default">
+  <div class="panel-heading">
+   <h2 class="text-center">{{model.forecast[0].day | uppercase}}</h2>
+   <p class="text-center">{{model.forecast[0].date}}</p>
+  </div>
+  <div class="panel-body">
+   <h1 class="text-center">{{model.forecast[0].temperature}}&#8451;</h1>
+   <h4 class="text-center">{{model.forecast[0].summary}}</h4>
+  </div>
+ </div>
+</div>
+
+ <div class="col-lg-4" ng-repeat="f in model.forecast" ng-if="$index > 0">
+  <div class="panel panel-default">
+   <div class="panel-heading">
+    <h2 class="text-center">{{f.day | uppercase}}</h2>
+    <p class="text-center">{{f.date}}</p>
+   </div>
+   <div class="panel-body">
+    <h1 class="text-center">{{f.temperature}}&#8451;</h1>
+    <h4 class="text-center">{{f.summary}}</h4>
+   </div>
+  </div>
+</div>
