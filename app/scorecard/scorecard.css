@@ -1,6 +1,31 @@
 /* score card css stylesheet */
-.appContainer {
-	width:500px;
-	height:800px;
-	border:1px solid black;
+.menuSpanner {
+	background-color: rgba(255, 255, 255, 0.25);
+	height:75px;
+	border-bottom:1px solid rgba(255, 255, 255, 0.5);
+	padding:25px;
+}
+
+.cardSpanner {
+	/* Height is viewport minus the height of the menu and score spanners */
+	height: calc(100vh - 75px - 50px);
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.scoreSpanner {
+	height: 50px;
+	border-top:1px solid rgba(255, 255, 255, 0.5);
+	border-bottom:1px solid rgba(255, 255, 255, 0.5);
+}
+
+.square {
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height: 50px;
+}
+
+.square2 {
+	background-color: rgba(255, 255, 255, 0.25);
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height: 50px;
 }
