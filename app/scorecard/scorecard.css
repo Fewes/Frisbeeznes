@@ -1,0 +1,6 @@
+/* score card css stylesheet */
+.appContainer {
+	width:500px;
+	height:800px;
+	border:1px solid black;
+}
