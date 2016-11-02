@@ -2,12 +2,12 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
-  'ngRoute',
-  'myApp.startpage',
-  'myApp.scorecard',
+	'ngRoute',
+	'myApp.startpage',
+	'myApp.scorecard',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+	$locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/startpage'}); //<--- write the page we want to start on
+	$routeProvider.otherwise({redirectTo: '/startpage'}); //<--- write the page we want to start on
 }]);
