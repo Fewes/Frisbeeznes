@@ -5,6 +5,7 @@ angular.module('myApp', [
 	'ngRoute',
 	'myApp.startpage',
 	'myApp.scorecard',
+	'myApp.tracks',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$locationProvider.hashPrefix('!');
