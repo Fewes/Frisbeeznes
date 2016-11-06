@@ -3,6 +3,13 @@ body {
 	padding:0;
 }
 
+.container-fluid {
+	padding:0;
+	overflow: hidden;
+	position: relative;
+}
+
+/*Vad är detta*/
 .menu {
 	list-style: none;
 	border-bottom: 0.1em solid black;

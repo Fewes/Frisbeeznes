@@ -1,0 +1,22 @@
+.topBar {
+    background-color: rgba(255, 255, 255, 0.25);
+    height:75px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);
+    padding:25px;
+}
+
+.trackCont {
+	height: calc(100vh - 75px);
+}
+
+.imgHolder {
+	padding-top: 5vh;
+	height: 45vh;
+}
+
+.infoText {
+	height: calc(100vh - 50vh - 75px);
+}
+.trackText {
+	height: 30vh;
+}
