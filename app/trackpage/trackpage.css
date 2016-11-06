@@ -2,7 +2,7 @@
     background-color: rgba(255, 255, 255, 0.25);
     height:75px;
     border-bottom:1px solid rgba(255, 255, 255, 0.5);
-    padding:25px;
+    padding-top:25px;
 }
 
 .trackCont {
@@ -11,7 +11,7 @@
 
 .imgHolder {
 	padding-top: 5vh;
-	height: 45vh;
+	height: 50vh;
 }
 
 .infoText {
