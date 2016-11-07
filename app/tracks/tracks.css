@@ -1,3 +1,15 @@
+.topBar {
+	background-color: rgba(255, 255, 255, 0.25);
+	height:75px;
+	border-bottom:1px solid rgba(255, 255, 255, 0.5);
+	padding-top:25px;
+}
+
+.glyphicon-chevron-left{
+	font-size: 30px;
+	top: -5px !important;
+}
+
 ul.horizontal{
 	margin:0;
 	padding:0;
