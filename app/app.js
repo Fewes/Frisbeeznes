@@ -8,6 +8,8 @@ angular.module('myApp', [
 	'myApp.tracks',
 	'myApp.trackpage',
 	'myApp.holepage',
+	'myApp.holes',
+	'myApp.result',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$locationProvider.hashPrefix('!');
