@@ -25,7 +25,8 @@
 	$ccol.scroll(function()
 	{
 		$top.stop(true,true).fadeTo(250, $ccol.scrollTop() > 10 ? 1 : 0);
-		$btm.stop(true,true).fadeTo(250, $ccol.scrollTop() < $ccol.height() - 10 ? 1 : 0);
+		// $btm.stop(true,true).fadeTo(250, $ccol.scrollTop() < $ccol.height() - 10 ? 1 : 0);
+		$btm.stop(true,true).fadeTo(250, $ccol.scrollTop() + $ccol.innerHeight() < $ccol[0].scrollHeight - 10 ? 1 : 0);
 	});
 </script>
 <div class="above"></div>
