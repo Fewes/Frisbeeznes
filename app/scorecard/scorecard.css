@@ -8,12 +8,24 @@
 
 .cardSpanner {
 	/* Height is viewport minus the height of the menu and score spanners */
-	height: calc(100vh - 75px - (100vw / 6) - 1px);
+	height: calc(100vh - 75px - (100vw / 6) * 2 - 1px);
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
 ::-webkit-scrollbar {
 	width: 0px;  /* remove scrollbar space */
+}
+
+.titleSpanner {
+	height: calc(100vw / 6);
+}
+
+.titleSquare {
+	background-color: rgba(255, 255, 255, 0.25);
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.25);
 }
 
 .scoreSpanner {
@@ -22,15 +34,33 @@
 	border-bottom:1px solid rgba(255, 255, 255, 0.5);
 }
 
+.squareTitle {
+	background-color: rgba(255, 255, 255, 0.1);
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.3);
+}
+
 .square {
 	border:1px solid rgba(255, 255, 255, 0.5);
 	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.3);
+}
+
+.squareContent {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .square2 {
 	background-color: rgba(255, 255, 255, 0.25);
 	border:1px solid rgba(255, 255, 255, 0.5);
 	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.3);
 }
 
 .row-no-padding {
@@ -50,7 +80,7 @@
 	width: 100%;
 	height: calc(100vw / 6);
 	position: absolute;
-	top: 75px;
+	top: calc(75px + 100vw / 6);
 	left: 0;
 	z-index: 10;
 	display: none;
