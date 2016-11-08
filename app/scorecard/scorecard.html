@@ -1,17 +1,16 @@
-<!-- <div class="menuSpanner">
-	<p> This is the muffuggin score card </p>
-</div>
-
-<div class="cardSpanner">
-	
-</div>
-
-<div class="scoreSpanner">
-	
-</div> -->
 <div class="row menuSpanner">
-	<div class="col-xs-9">Bannamn</div>
-	<div class="col-xs-3">Avsluta</div>
+	<a href="#!/startpage" class="glyphicon glyphicon-chevron-left col-xs-2 "></a> <!-- change to correctpage -->
+	<div class="col-xs-6">Bannamn</div>
+	<a href="#!/startpage" class="col-xs-3" style="font-size: medium;">Avsluta</a> <!-- change to correctpage -->
+</div>
+
+<div class="row titleSpanner row-no-padding">
+	<div class="col-xs-2 titleSquare"><div class="squareContent">Hål</div></div>
+	<div class="col-xs-2 titleSquare"><div class="squareContent">T</div></div>
+	<div class="col-xs-2 titleSquare"><div class="squareContent">F</div></div>
+	<div class="col-xs-2 titleSquare"><div class="squareContent">O</div></div>
+	<div class="col-xs-2 titleSquare"><div class="squareContent">E</div></div>
+	<div class="col-xs-2 titleSquare"><div class="squareContent">M</div></div>
 </div>
 
 <!-- Overflow gradients -->
@@ -25,7 +24,8 @@
 	$ccol.scroll(function()
 	{
 		$top.stop(true,true).fadeTo(250, $ccol.scrollTop() > 10 ? 1 : 0);
-		$btm.stop(true,true).fadeTo(250, $ccol.scrollTop() < $ccol.height() - 10 ? 1 : 0);
+		// $btm.stop(true,true).fadeTo(250, $ccol.scrollTop() < $ccol.height() - 10 ? 1 : 0);
+		$btm.stop(true,true).fadeTo(250, $ccol.scrollTop() + $ccol.innerHeight() < $ccol[0].scrollHeight - 10 ? 1 : 0);
 	});
 </script>
 <div class="above"></div>
@@ -34,133 +34,109 @@
 <div class="cardSpanner"> <!-- container for correct padding -->
 	
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">5</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">6</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">7</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">8</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">9</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">10</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">11</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
-		<div class="col-xs-2 square">.col-xs-2</div>
+		<div class="col-xs-2 squareTitle"><div class="squareContent">12</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
+		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
 	</div>
 
 </div>
 
 <div class="row scoreSpanner row-no-padding"> <!-- container for correct padding -->
-	<div class="col-xs-2 square2">Tot</div>
-	<div class="col-xs-2 square2">5</div>
-	<div class="col-xs-2 square2">28</div>
-	<div class="col-xs-2 square2">17</div>
-	<div class="col-xs-2 square2">20</div>
-	<div class="col-xs-2 square2">45</div>
+	<div class="col-xs-2 square2"><div class="squareContent">Tot</div></div>
+	<div class="col-xs-2 square2"><div class="squareContent">48</div></div>
+	<div class="col-xs-2 square2"><div class="squareContent">24</div></div>
+	<div class="col-xs-2 square2"><div class="squareContent">12</div></div>
+	<div class="col-xs-2 square2"><div class="squareContent">36</div></div>
+	<div class="col-xs-2 square2"><div class="squareContent">36</div></div>
 </div>

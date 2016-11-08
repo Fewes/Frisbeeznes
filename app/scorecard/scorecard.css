@@ -8,12 +8,24 @@
 
 .cardSpanner {
 	/* Height is viewport minus the height of the menu and score spanners */
-	height: calc(100vh - 75px - (100vw / 6) - 1px);
+	height: calc(100vh - 75px - (100vw / 6) * 2 - 1px);
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
 ::-webkit-scrollbar {
 	width: 0px;  /* remove scrollbar space */
+}
+
+.titleSpanner {
+	height: calc(100vw / 6);
+}
+
+.titleSquare {
+	background-color: rgba(255, 255, 255, 0.25);
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.25);
 }
 
 .scoreSpanner {
@@ -22,15 +34,33 @@
 	border-bottom:1px solid rgba(255, 255, 255, 0.5);
 }
 
+.squareTitle {
+	background-color: rgba(255, 255, 255, 0.1);
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.3);
+}
+
 .square {
 	border:1px solid rgba(255, 255, 255, 0.5);
 	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.3);
+}
+
+.squareContent {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .square2 {
 	background-color: rgba(255, 255, 255, 0.25);
 	border:1px solid rgba(255, 255, 255, 0.5);
 	height: calc(100vw / 6);
+	display: table;
+	font-size: calc(100vw / 6 * 0.3);
 }
 
 .row-no-padding {
@@ -43,18 +73,24 @@
 }
 
 .gradient-top {
-	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.0));
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.0)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.0)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.0)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.0)	); /* Standard syntax */
 	width: 100%;
 	height: calc(100vw / 6);
 	position: absolute;
-	top: 75px;
+	top: calc(75px + 100vw / 6);
 	left: 0;
 	z-index: 10;
 	display: none;
 }
 
 .gradient-bottom {
-	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25));
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25)	); /* Standard syntax */
 	width: 100%;
 	height: calc(100vw / 6);
 	position: absolute;
