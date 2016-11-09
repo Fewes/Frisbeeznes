@@ -10,8 +10,9 @@ angular.module('myApp', [
 	'myApp.holepage',
 	'myApp.holes',
 	'myApp.result',
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+	'myApp.mainmodule',
+])
+.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$locationProvider.hashPrefix('!');
 
 	$routeProvider.otherwise({redirectTo: '/startpage'}); //<--- write the page we want to start on

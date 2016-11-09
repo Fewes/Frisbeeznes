@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="myApp" data-ng-controller="mainCtrl">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,11 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
-	<!--
-	<nav class="menu">
-	<li>Placeholder</li>
-	</nav>
-	-->
 
 	<div class="container-fluid" data-ng-view></div>
 
@@ -48,6 +43,7 @@
 	<script src="app/holepage/holepage.js"></script>
 	<script src="app/holes/holes.js"></script>
 	<script src="app/result/result.js"></script>
+	<script src="app/mainController.js"></script>
 	<!-- end -->
 </body>
 </html>
