@@ -6,11 +6,11 @@
 
 <!-- The list with all the tracks -->
 <div class="row container">
-	<div class="col-xs-12 track" ng-click="courseChoice($event)">Nuketown</div>
-	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Skyrim </a></div>
+	<div class="col-xs-12 track" ng-repeat="c in courses" ng-click="courseChoice(c.name)"><a>{{c.name}}</a></div>
+	<!--<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Skyrim </a></div>
 	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Växjö Kloster </a></div>
 	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Watchpoint Gibraltar </a></div>
 	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Dome </a></div>
 	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> de_dust_2 </a></div>
-	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Skidrow </a></div>
+	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Skidrow </a></div> -->
 </div>
