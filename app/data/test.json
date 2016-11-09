@@ -1,0 +1,60 @@
+[{
+	"lat":"58.58987519999999",
+	"lon":"16.17643989999999",
+	"id": "campus-nkpg",
+	"images":[
+		"img/place/campus-norrköping.jpg"
+	],
+	"name":"Campus Norrköping",
+	"forecast":[
+		{
+			"date": "2016-09-05",
+			"day":"måndag",
+			"temperature": "42.0",
+			"summary":"Klart",
+			"description":"Klart väder med enstaka stackmoln"
+		},
+		{
+			"date": "2016-09-06",
+			"day":"tisdag",
+			"temperature": "19.5",
+			"summary":"Halvklart",
+			"description":"Växlande molnighet över dagen"
+		},
+		{
+			"date": "2016-09-07",
+			"day":"onsdag",
+			"temperature": "45.0",
+			"summary":"Klart",
+			"description":"Klart väder med enstaka stackmoln"
+		},
+		{
+			"date": "2016-09-08",
+			"day":"torsdag",
+			"temperature": "16.0",
+			"summary":"Växlande molnighet",
+			"description":"Soligt med bitvis stackmoln"
+		},
+		{
+			"date": "2016-09-09",
+			"day":"fredag",
+			"temperature": "24.0",
+			"summary":"Klart",
+			"description":"Klart väder med enstaka stackmoln"
+		},
+		{
+			"date": "2016-09-10",
+			"day":"lördag",
+			"temperature": "25.0",
+			"summary":"Klart och Soligt",
+			"description":"Solen skiner från en klar eller näst intill molnfri himmel."
+		},
+		{
+			"date": "2016-09-11",
+			"day":"söndag",
+			"temperature": "18.0",
+			"summary":"Klart och övervägande soligt",
+			"description":"Endast kortvarigt döljer sig solen bakom ett moln."
+		}
+	]
+}]

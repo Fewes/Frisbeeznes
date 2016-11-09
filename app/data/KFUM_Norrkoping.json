@@ -1,6 +1,8 @@
-{
-	"course":[
-		{"name":"KFUM Norrköping", "description":"Norrköpings äldsta och enda frisbeegolfbana", "image":"http://nerdosaur.com/wp-content/uploads/2014/03/frisbee-golf-smokey.png"},
+[{
+	"name":"KFUM Norrköping",
+	"description":"Norrköpings äldsta och enda frisbeegolfbana",
+	"image":"http://nerdosaur.com/wp-content/uploads/2014/03/frisbee-golf-smokey.png",
+	"holes":[
 		{"hole":"1", "distance":"321", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
 		{"hole":"2", "distance":"23", "par":"4", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
 		{"hole":"3", "distance":"455", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
@@ -20,4 +22,4 @@
 		{"hole":"17", "distance":"44", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
 		{"hole":"18", "distance":"66", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"}
 	]
-}
+}]
