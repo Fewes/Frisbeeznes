@@ -3,27 +3,25 @@ var read = angular.module('myApp.read', ['ngResource']);
 
 app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
-	$scope.courseName = "erik är dum i huvudet";
-	$scope.courseFileName;
-	$scope.courseChoice = function () {
-		$scope.courseName = "KFUM Norrköping";
-		$scope.courseFileName = "KFUM_Norrkoping";
 
-		readFile.query({location: $scope.courseFileName},function(result){
+	$scope.courseChoice = function (courName) {
+		//$scope.courseName = courName;
+		$scope.courseFileName = "Linkoping_Ryds_motioncentrum";
+
+		readFile.query({courseFileName: $scope.courseFileName},function(result){
 			$scope.courseInfo = result[0];
-			alert($scope.courseName);
 		});
-		location.href = "#!/trackpage";
+		//location.href = "#!/trackpage";
 	}
 
 }]);
 
 read.factory('readFile', ['$resource',
 	function($resource) {
-		return $resource('app/data/KFUM_Norrkoping.json', {}, {
+		return $resource('app/data/:courseFileName.json', {}, {
 			query: {
 				method: 'GET',
-				params: {},
+				params: {courseFileName: '@courseFileName'},
 				isArray: true
 			}
 		});
