@@ -1,0 +1,19 @@
+.picture {
+	background-image: url("https://static-s.aa-cdn.net/img/gp/20600004791878/NHD8Of7-pFidXSBMsz-LI8ZpcFfYfRfbRzySD-Ju-j74Ir8a72mToCi6gPGR_cLEf8GL=w300?v=1");
+	width: 256px;
+	height: 256px;
+}
+
+.settingSpanner {
+	background-color: rgba(255, 255, 255, 0.25);
+	height: 75px;
+}
+
+.nameSpanner {
+	position: relative;
+	height: 100px;
+}
+
+.picSpanner {
+	position: relative;
+}
