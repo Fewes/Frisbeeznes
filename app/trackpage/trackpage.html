@@ -1,20 +1,20 @@
 <div class="topBar">
 	<a href="#!/tracks" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
-	<span class="col-xs-8">Godtyckligt Ban Namn</span>
+	<span class="col-xs-8">{{courseInfo.name}}</span>
 	<!-- <span class="col-xs-1"></span> -->
-	<a href="#!/player" class="btn btn-default topBtn col-xs-3">Vidare</a> <!-- Här ska tätt plater sak göras -->
+	<a href="#!/scorecard" class="btn btn-default topBtn col-xs-3">Vidare</a> <!-- Här ska tätt plater sak göras -->
 
 </div>
 
 <div class="trackCont">
 	<div class="row imgHolder">
 		<span class="col-xs-1"></span>
-		<img class="col-xs-10 bigImg" src="http://nerdosaur.com/wp-content/uploads/2014/03/frisbee-golf-smokey.png" alt="An overview of the track" >
+		<img class="col-xs-10 bigImg" src={{courseInfo.image}} >
 		<span class="col-xs-1"></span>
 	</div>
 
 	<div class="infoText">
-		<span class="col-xs-12 trackText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus gravida pretium. Nunc sit amet est a justo lobortis interdum at in mauris. Maecenas facilisis neque magna, non ullamcorper quam bibendum id. Sed sit amet metus eleifend massa suscipit sagittis nec vel sem. Vestibulum elit sem, tincidunt et tempor ac, placerat quis tellus. </span>
-		<a href="#!/holes" class="btn btn-default infoTextBtn col-xs-3">Hål info</a>
+		<span class="col-xs-12 trackText">{{courseInfo.description}}</span>
+		<a href="#!/holes" class="btn btn-default infoTextBtn col-xs-3">Hålinfo</a>
 	</div>
 </div>

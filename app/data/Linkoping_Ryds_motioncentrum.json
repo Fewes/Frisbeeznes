@@ -1,6 +1,8 @@
 [{
-	"course":[
-		{"name":"Linköping Ryds motioncentrum", "description":"Akta dig för knivarna och de uppspännda trådarna ", "image":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRAvlQPylhZ0AHbym3nu1JCmNSTK0dAoT6JM7qF0p9XOYU8FQmXtQ"},
+	"name":"Linköping Ryds motioncentrum",
+	"description":"Akta dig för knivarna och de uppspännda trådarna ",
+	"image":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRAvlQPylhZ0AHbym3nu1JCmNSTK0dAoT6JM7qF0p9XOYU8FQmXtQ",
+	"holes":[
 		{"hole":"1", "distance":"321", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
 		{"hole":"2", "distance":"23", "par":"4", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
 		{"hole":"3", "distance":"455", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},

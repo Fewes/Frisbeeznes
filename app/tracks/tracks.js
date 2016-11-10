@@ -5,6 +5,6 @@ angular.module('myApp.tracks', ['ngRoute'])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/tracks', {
 			templateUrl: 'app/tracks/tracks.html',
-			controller: 'mainCtrl'  //Add a controller here later if we need it
+			controller: '' //Add a controller here later if we need it
 		});
 	}])

@@ -1,7 +1,7 @@
-[{
-  "courses":[
-	  {"name":"KFUM Norrköping"},
-	  {"name":"Linköping SAAB arena"},
-	  {"name":"Linköping Ryds motioncentrum"}
-  ]
-}]
+[
+	{"name":"KFUM Norrköping"},
+	{"name":"Linköping SAAB arena"},
+	{"name":"Linköping Ryds motioncentrum"},
+	{"name":"de_dust_2"}
+
+]
