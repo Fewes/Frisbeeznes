@@ -13,6 +13,7 @@ angular.module('myApp', [
 	'myApp.firstpage',
 	'myApp.pointpage',
 	'myApp.mainmodule',
+	'myApp.read',
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$locationProvider.hashPrefix('!');

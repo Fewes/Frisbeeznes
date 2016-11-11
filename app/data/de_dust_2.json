@@ -1,7 +1,7 @@
 [{
-	"name":"Linköping SAAB arena",
-	"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus gravida pretium. Nunc sit amet est a justo lobortis interdum at in mauris. Maecenas facilisis neque magna, non ullamcorper quam bibendum id. Sed sit amet metus eleifend massa suscipit sagittis nec vel sem. Vestibulum elit sem, tincidunt et tempor ac, placerat quis tellus.",
-	"image":"http://nerdosaur.com/wp-content/uploads/2014/03/frisbee-golf-smokey.png",
+	"name":"de_dust_2",
+	"description":"Rush B, cyka blyat",
+	"image":"http://i2.kym-cdn.com/photos/images/original/001/176/123/fc0.jpg",
 	"holes":[
 		{"hole":"1", "distance":"321", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
 		{"hole":"2", "distance":"23", "par":"4", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
