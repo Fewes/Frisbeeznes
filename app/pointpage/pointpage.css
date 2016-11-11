@@ -1,0 +1,38 @@
+.negButton {
+	color: rgba(255,0,0,0.2);
+	font-size: 50px;
+	vertical-align: middle;
+}
+
+.posButton {
+	color: rgba(0,255,0,0.2);
+	font-size: 50px;
+	vertical-align: middle;
+}
+
+.playerName {
+	background-color: rgba(255,255,200,0.2);
+	border-bottom: 2px solid rgba(255,255,200,0.5);
+	text-align: center;
+	font-size: 50px;
+}
+
+.pointRow {
+	background-color: rgba(255,255,200,0.15);
+	border-bottom: 2px solid rgba(255,255,200,0.5);
+}
+
+.points {
+	text-align: center;
+	font-size: 45px;
+}
+
+.addPointSpanner {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#col-no-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
