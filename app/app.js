@@ -11,6 +11,7 @@ angular.module('myApp', [
 	'myApp.holes',
 	'myApp.result',
 	'myApp.firstpage',
+	'myApp.pointpage',
 	'myApp.mainmodule',
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
