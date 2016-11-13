@@ -14,6 +14,7 @@ angular.module('myApp', [
 	'myApp.pointpage',
 	'myApp.mainmodule',
 	'myApp.read',
+	'myApp.playerpage',
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	$locationProvider.hashPrefix('!');

@@ -1,0 +1,32 @@
+.playerCont {
+	height: 80vh;
+}
+
+.playerAdd {
+	border-top:1px solid rgba(255, 255, 255, 0.5);
+	height: calc(100vh - 75px - 80vh);
+}
+
+.addSign{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.playerDiv{
+	padding-top:20px;
+}
+
+.remove{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,+50%);
+}
+
+.playerDiv.nameText{
+
+}
+
+.playerDiv.number{
+
+}
