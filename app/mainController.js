@@ -30,9 +30,23 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		});
 	}
 
+	//Removes the player that is send in
+	$scope.removePlayer = function(item) {
+		var index = $scope.players.indexOf(item);
+		$scope.players.splice(index, 1);
+	}
+
+	//Removes the player that is send in
+	$scope.addPlayer = function() {
+		$scope.players.push({name:'Player ' + ($scope.players.length + 1), score:'0'});
+	}
+
 	//Runs when the controller loads
-	$scope.courseOptions();  //Ändra här sen så att denna inte körs varje gång ;)
-	console.log("nu körs jag");
+	$scope.courseOptions();
+
+	$scope.players = [];
+	$scope.players[0] = {name:'Player 1', score:'0'}
+
 }]);
 
 read.factory('readFile', ['$resource',

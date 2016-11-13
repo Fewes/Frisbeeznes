@@ -5,16 +5,21 @@
 </div>
 
 <div class="playerCont">
-	<div class="playerDiv">
-		<span class="number col-xs-2"> 1.</span>
-		<input class="nameText col-xs-7" type="text" ng-model="pName">
-		<div class="col-xs-3">
-			<div class="remove glyphicon glyphicon-minus-sign"></div>
+
+	<div class="playerDiv" data-ng-repeat="p in players">
+		<span class="number col-xs-2"> {{players.length}}</span>
+		<input class="nameText col-xs-7" type="text" ng-model=p.name>
+		<div class="col-xs-3 removeOuterDiv">
+			<div class="removeInnerDiv glyphicon glyphicon-minus-sign" ng-click="removePlayer(p)"></div>
 		</div>
 	</div>
+
+
 </div>
 
-<div class="playerAdd">
+</div>
+
+<div class="playerAdd" ng-click="addPlayer()">
 	<div class="addSign glyphicon glyphicon-plus-sign"> </div>
 
 </div>
