@@ -1,11 +1,11 @@
 .playerCont {
-	height: 80vh;
+	height: 75vh;
 	overflow-y: scroll;
 }
 
 .playerAdd {
 	border-top:1px solid rgba(255, 255, 255, 0.5);
-	height: calc(100vh - 75px - 80vh);
+	height: calc(100vh - 75px - 75vh);
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -13,7 +13,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	font-size: calc((100vh - 75px - 80vh) * 0.8);
+	font-size: calc((100vh - 75px - 75vh) * 0.8);
 }
 
 .playerDiv{

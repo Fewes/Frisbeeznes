@@ -1,17 +1,18 @@
 <div class="topBar">
 	<a href="#!/holes" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
-	<span class="col-xs-11">Godtyckligt Ban och Hål Namn</span>
+	<span class="col-xs-11">{{courseInfo.name}} Hål {{hole}}</span>
 
 </div>
 
 <div class="trackCont">
 	<div class="row imgHolder">
 		<span class="col-xs-1"></span>
-		<img class="col-xs-10 bigImg" src="https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg" alt="An overview of the track" >
+		<img class="col-xs-10 bigImg" src={{courseInfo.holes[hole-1].image}} alt="An overview of the track" >
 		<span class="col-xs-1"></span>
 	</div>
 
 	<div class="infoText">
-		<span class="col-xs-12 trackText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus gravida pretium. Nunc sit amet est a justo lobortis interdum at in mauris. Maecenas facilisis neque magna, non ullamcorper quam bibendum id. Sed sit amet metus eleifend massa suscipit sagittis nec vel sem. Vestibulum elit sem, tincidunt et tempor ac, placerat quis tellus. </span>
+		<span class="col-xs-12 holeText"> Längd: {{courseInfo.holes[hole-1].distance}}m</span>
+		<span class="col-xs-12 holeText"> Par: {{courseInfo.holes[hole-1].par}}</span>
 	</div>
 </div>

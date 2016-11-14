@@ -5,6 +5,6 @@ angular.module('myApp.startpage', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/startpage', {
 		templateUrl: 'app/startpage/startpage.html',
-		controller: '??'  //Add a controller here later if we need it
+		controller: ''  //Add a controller here later if we need it
 	});
 }])
