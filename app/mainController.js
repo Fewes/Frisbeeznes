@@ -52,6 +52,8 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 	$scope.players = [];
 	$scope.addPlayer();
 
+
+
 }]);
 
 read.factory('readFile', ['$resource',

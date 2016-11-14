@@ -16,7 +16,7 @@
 	font-size: calc((100vh - 75px - 75vh) * 0.8);
 }
 
-.playerDiv{
+#playerDiv{
 	/*padding-top:30px;*/
 	height: 90px;
 	border-bottom:1px solid rgba(255, 255, 255, 0.5);

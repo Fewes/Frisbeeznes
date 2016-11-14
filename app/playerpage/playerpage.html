@@ -6,8 +6,8 @@
 
 <div class="playerCont">
 
-	<div class="playerDiv" data-ng-repeat="p in players">
-		<span class="number col-xs-2"> {{players.length}}</span>  <!-- Need to fix this somehow. Not sure how-->
+	<div id="playerDiv" data-ng-repeat="p in players">
+		<span class="number col-xs-2">{{players.indexOf(p) + 1}}</span>  <!-- Need to fix this somehow. Not sure how-->
 		<input class="nameText col-xs-7" type="text" ng-model=p.name>
 		<div class="col-xs-3 removeOuterDiv">
 			<div class="removeInnerDiv glyphicon glyphicon-minus-sign" ng-click="removePlayer(p)"></div>
@@ -18,4 +18,5 @@
 
 <div class="playerAdd" ng-click="addPlayer()">
 	<div class="addSign glyphicon glyphicon-plus-sign"> </div>
+
 </div>
