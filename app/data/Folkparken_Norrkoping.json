@@ -1,0 +1,25 @@
+[{
+	"name":"Folkparken Norrköping",
+	"description":"Med 18hål och många träd att träffa är denna bana Norrköpings stolthet. Många tappra har förlorat allt hopp här. Men efter en bärka eller två är man på topp igen. Gratis att spela",
+	"image":"http://nerdosaur.com/wp-content/uploads/2014/03/frisbee-golf-smokey.png",
+	"holes":[
+		{"hole":"1", "distance":"88", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"2", "distance":"65", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"3", "distance":"117", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"4", "distance":"89", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"5", "distance":"98", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"6", "distance":"62", "par":"2", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"7", "distance":"98", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"8", "distance":"75", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"9", "distance":"100", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"10", "distance":"85", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"11", "distance":"95", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"12", "distance":"55", "par":"2", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"13", "distance":"82", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"14", "distance":"75", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"15", "distance":"100", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"16", "distance":"80", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"17", "distance":"72", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"},
+		{"hole":"18", "distance":"87", "par":"3", "image":"https://s-media-cache-ak0.pinimg.com/originals/78/6c/51/786c51d70bc05b01ea1b1157cd85dc43.jpg"}
+	]
+}]

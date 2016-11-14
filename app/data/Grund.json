@@ -1,0 +1,25 @@
+[{
+  "name":"",
+  "description":"",
+  "image":"",
+  "holes":[
+    {"hole":"1", "distance":"", "par":"3", "image":""},
+    {"hole":"2", "distance":"", "par":"3", "image":""},
+    {"hole":"3", "distance":"", "par":"3", "image":""},
+    {"hole":"4", "distance":"", "par":"3", "image":""},
+    {"hole":"5", "distance":"", "par":"3", "image":""},
+    {"hole":"6", "distance":"", "par":"3", "image":""},
+    {"hole":"7", "distance":"", "par":"3", "image":""},
+    {"hole":"8", "distance":"", "par":"3", "image":""},
+    {"hole":"9", "distance":"", "par":"3", "image":""},
+    {"hole":"10", "distance":"", "par":"3", "image":""},
+    {"hole":"11", "distance":"", "par":"3", "image":""},
+    {"hole":"12", "distance":"", "par":"3", "image":""},
+    {"hole":"13", "distance":"", "par":"3", "image":""},
+    {"hole":"14", "distance":"", "par":"3", "image":""},
+    {"hole":"15", "distance":"", "par":"3", "image":""},
+    {"hole":"16", "distance":"", "par":"3", "image":""},
+    {"hole":"17", "distance":"", "par":"3", "image":""},
+    {"hole":"18", "distance":"", "par":"3", "image":""}
+  ]
+}]

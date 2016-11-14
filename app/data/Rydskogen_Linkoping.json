@@ -1,0 +1,25 @@
+[{
+	"name":"Rydskogen Linköping",
+	"description":"Banan i Rydsskogen startades 2007. Banans längden är på ca 2000 meter och banan är svår och det krävs en kombination av att kunna kasta långt och med precision för att lyckas bra. 18Hål, typ: Skog. Gratis att spela",
+	"image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Bankarta_2.5.png",
+	"holes":[
+		{"hole":"1", "distance":"77", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål1-718x1024.png"},
+		{"hole":"2", "distance":"146", "par":"4", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål2-718x1024.png"},
+		{"hole":"3", "distance":"141", "par":"4", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål3-718x1024.png"},
+		{"hole":"4", "distance":"73", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål4-724x1024.jpg"},
+		{"hole":"5", "distance":"79", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål5-718x1024.png"},
+		{"hole":"6", "distance":"90", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål6-718x1024.png"},
+		{"hole":"7", "distance":"143", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål7-724x1024.jpg"},
+		{"hole":"8", "distance":"185", "par":"5", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål8-718x1024.png"},
+		{"hole":"9", "distance":"57", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål9-718x1024.png"},
+		{"hole":"10", "distance":"73", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål10-718x1024.png"},
+		{"hole":"11", "distance":"90", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål11-683x1024.png"},
+		{"hole":"12", "distance":"102", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål12-724x1024.jpg"},
+		{"hole":"13", "distance":"216", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål13-724x1024.jpg"},
+		{"hole":"14", "distance":"91", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål14-724x1024.jpg"},
+		{"hole":"15", "distance":"93", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/hål15-718x1024.png"},
+		{"hole":"16", "distance":"79", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/hål16-718x1024.png"},
+		{"hole":"17", "distance":"146", "par":"4", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål17-697x1024.png"},
+		{"hole":"18", "distance":"84", "par":"3", "image":"http://dgb.cdn.geniem.com/content/uploads/2014/04/Hål18-687x1024.png"}
+	]
+}]

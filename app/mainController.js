@@ -15,7 +15,6 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		cName = cName.replace(/Ä/g, "A");
 		cName = cName.replace(/Ö/g, "O");
 		$scope.courseFileName = cName;
-		console.log(cName);
 		readFile.query({courseFileName: $scope.courseFileName},function(result){
 			$scope.courseInfo = result[0];
 		});
@@ -43,13 +42,15 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
-		$scope.players.push({name:'Player ' + ($scope.players.length + 1), score:'0'});
+		$scope.players.push({name:'Player ' + $scope.playcnt, score:'0'});
+		++$scope.playcnt;
 	}
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
 	$scope.players = [];
+	$scope.playcnt = 1;
 	$scope.addPlayer();
 
 
