@@ -14,11 +14,17 @@
 	height: 50vh;
 }
 
+.bigImg{
+	max-height: 45vh;
+}
+
 .infoText {
 	height: calc(100vh - 50vh - 75px);
 }
-.trackText {
-	height: 30vh;
+.holeText {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 2em;
 }
 
 

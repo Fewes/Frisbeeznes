@@ -1,0 +1,46 @@
+.playerCont {
+	height: 75vh;
+	overflow-y: scroll;
+}
+
+.playerAdd {
+	border-top:1px solid rgba(255, 255, 255, 0.5);
+	height: calc(100vh - 75px - 75vh);
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.addSign{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: calc((100vh - 75px - 75vh) * 0.8);
+}
+
+.playerDiv{
+	/*padding-top:30px;*/
+	height: 90px;
+	border-bottom:1px solid rgba(255, 255, 255, 0.5);
+}
+
+.number{
+	top: 50%;
+	transform: translate(0%,-55%);
+	font-size: 30px;
+}
+
+.nameText{
+	top: 50%;
+	transform: translate(0%,-55%);
+}
+
+.removeOuterDiv{
+	top: 50%;
+	transform: translate(0%,-50%);
+}
+
+.removeInnerDiv{
+	top: 50%;
+	left: 15px;
+	/*transform: translate(-50%,+50%);*/
+	font-size: 30px;
+}

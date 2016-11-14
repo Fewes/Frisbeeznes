@@ -22,6 +22,11 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		location.href = "#!/trackpage";
 	}
 
+	$scope.holeChoice = function (hNum) {
+		$scope.hole = hNum;
+		location.href = "#!/holepage";
+	}
+
 	//Reads in all the different coursenames
 	$scope.courseOptions = function () {
 		$scope.courseFileName = "courses";
@@ -30,9 +35,23 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		});
 	}
 
+	//Removes the player that is send in
+	$scope.removePlayer = function(item) {
+		var index = $scope.players.indexOf(item);
+		$scope.players.splice(index, 1);
+	}
+
+	//Add a plyer to the list
+	$scope.addPlayer = function() {
+		$scope.players.push({name:'Player ' + ($scope.players.length + 1), score:'0'});
+	}
+
 	//Runs when the controller loads
-	$scope.courseOptions();  //Ändra här sen så att denna inte körs varje gång ;)
-	console.log("nu körs jag");
+	$scope.courseOptions();
+
+	$scope.players = [];
+	$scope.addPlayer();
+
 }]);
 
 read.factory('readFile', ['$resource',

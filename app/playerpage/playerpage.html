@@ -1,0 +1,21 @@
+<div class="topBar">
+	<a href="#!/trackpage" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
+	<span class="col-xs-8">Players</span>
+	<a href="#!/scorecard" class="btn btn-default topBtn col-xs-3">Starta</a>
+</div>
+
+<div class="playerCont">
+
+	<div class="playerDiv" data-ng-repeat="p in players">
+		<span class="number col-xs-2"> {{players.length}}</span>  <!-- Need to fix this somehow. Not sure how-->
+		<input class="nameText col-xs-7" type="text" ng-model=p.name>
+		<div class="col-xs-3 removeOuterDiv">
+			<div class="removeInnerDiv glyphicon glyphicon-minus-sign" ng-click="removePlayer(p)"></div>
+		</div>
+	</div>
+
+</div>
+
+<div class="playerAdd" ng-click="addPlayer()">
+	<div class="addSign glyphicon glyphicon-plus-sign"> </div>
+</div>
