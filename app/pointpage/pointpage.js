@@ -8,33 +8,26 @@ angular.module('myApp.pointpage', ['ngRoute'])
 
 /*Function to see if the value is 0 or the maximum allowed,
 if so fade the buttons and disable them*/
-function fadeButton(){
+function fadeButton(id, pressedBtn) {
 
-	var numberOfThrows = parseInt(document.getElementsByClassName('points').textContent);
+	var classLoc = (pressedBtn.className).split(" ")[0];
 
-	var neg = document.getElementsByClassName("negButton").className;
-	var pos = document.getElementsByClassName("posButton").className;
+	var numberOfThrows = parseInt(document.getElementById(id).textContent);
+	console.log(numberOfThrows);
 
-	if(neg == 'negButton'){
-		document.getElementsByClassName('points').textContent = numberOfThrows-1;
-		alert(numberOfThrows);
+	if(document.getElementById(id).textContent > 0 && classLoc == "negButton"){
+		document.getElementById(id).textContent = "" + (numberOfThrows - 1);
+		pressedBtn.parentNode.parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
 	}
-	else if (pos == 'posButton'){
-		document.getElementsByClassName('points').textContent = numberOfThrows+1;
-		alert(numberOfThrows);
+	else if(document.getElementById(id).textContent < 8 && classLoc == "posButton") {
+		document.getElementById(id).textContent = "" + (numberOfThrows + 1);
+		pressedBtn.parentNode.parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
 	}
 
-
-	if(numberOfThrows == 0){
-		document.getElementsByClassName('negButton').style.color = '#123123';
-		/*Disable button*/
+	if(document.getElementById(id).textContent == 0){
+		pressedBtn.style.color = "rgba(191,191,191,0.2)";
 	}
-	else if(numberOfThrows > 0 && numberOfThrows < 8/*Max throws*/) {
-		document.getElementsByClassName('negButton').style.color = '#101010';
-		document.getElementsByClassName('posButton').style.color = '#414141';
+	else if(document.getElementById(id).textContent == 8){
+		pressedBtn.style.color = "rgba(191,191,191,0.2)";
 	}
-	else {
-		document.getElementsByClassName('posButton').style.color = '#131313';
-	}
-	alert("hej");
 }

@@ -2,24 +2,25 @@
 <div class="row menuSpanner row-no-padding">
 	<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-up"><!--icon --></a>
 	<div class="col-xs-5">
-		<div class="row holeInfo">"holeNumber"<!-- holenumber--></div>
-		<div class="row parInfo">"par"<!--parinfo--></div>
+		<div class="row holeInfo">Hål: {{15}}<!-- holenumber--></div>
+		<div class="row parInfo">Par: {{courseInfo.holes[15].par}}<!--parinfo--></div>
 	</div>
-	<a href="<!--link-->" class="btn btn-danger col-xs-3 buttonPos" role="button">Next Hole<!--next hole or finish button--></a>
+	<a href="" class="btn btn-danger col-xs-3 buttonPos" role="button">Next Hole<!--next hole or finish button--></a>
 </div>
 
 <!-- use ng-repeat to get several components -->
 <div class="row addPointSpanner row-no-padding">
-	<div class="col-xs-12 col-no-padding">
-		<div class="row playerName row-no-padding">"player"<!--playername--></div>
+	<div class="col-xs-12 col-no-padding" data-ng-repeat="p in players">
+		<div class="row playerName row-no-padding">p.name</div>
+
 		<div class="row pointRow row-no-padding"> <!-- think about all the cols from previous divs -->
 			<div class="col-xs-1"></div>
 			<div class="col-xs-2">
-				<div class="negButton glyphicon glyphicon-minus-sign" onclick="fadeButton()"><!--icon--></div>
+				<div class="negButton glyphicon glyphicon-minus-sign" onclick="fadeButton('0', this)"><!--icon--></div><!--make id dynamic-->
 			</div>
-			<div class="col-xs-6 points">10<!--points--></div>
+			<div class="points col-xs-6" id="0">p.<!--points--></div><!--make id dynamic-->
 			<div class="col-xs-2">
-				<div class="posButton glyphicon glyphicon-plus-sign" onclick="fadeButton()"><!--icon--></div>
+				<div class="posButton glyphicon glyphicon-plus-sign" onclick="fadeButton('0', this)"><!--icon--></div><!--make id dynamic-->
 			</div>
 			<div class="col-xs-1"></div>
 		</div>
