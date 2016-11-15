@@ -1,5 +1,5 @@
 /*The div that holds the menu */
-.menuBar {
+.menuBar{
 	background-color: rgba(255, 255, 255, 0.25);
 	height:75px;
 	border-bottom: solid white 2px;
@@ -11,16 +11,24 @@
 .glyphicon-chevron-left{
 	font-size: 30px;
 	top: -5px !important;
+	line-height: 25px;
 }
 /*A list object */
 .track{
 	text-align: center;
-	font-size: 30px;
-	height: 60px;
+	font-size: 28px;
+	height: 70px;
 	border-bottom: solid white 2px;
+	line-height: 70px;
 }
 /*The div that holds all the list objects */
 .container{
 	height: calc(100vh - 75px);
 	overflow-y: scroll;
+}
+
+.rubrik {
+	text-align: center;
+	font-size: 28px;
+	line-height: 28px;
 }
