@@ -34,6 +34,23 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		});
 	}
 
+
+	$scope.checkifPlayer = function () {
+		if($scope.players.length==0){
+			$scope.addPlayer();
+		}else{
+			for (var i = 0; i < $scope.players.length; i++) {
+				if($scope.players[i].holes.length != $scope.courseInfo.holes.length) {
+					$scope.players[i].holes = [];
+					for (var k = 0; k < $scope.courseInfo.holes.length ; k++) {
+						$scope.players[i].holes[k] = 0;
+					}
+				}
+			}
+		}
+	}
+
+
 	//Removes the player that is send in
 	$scope.removePlayer = function(item) {
 		var index = $scope.players.indexOf(item);
@@ -42,19 +59,30 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
-		$scope.players.push({name:'Player ' + $scope.playcnt, holes:[]});
-		++$scope.playcnt;
+		okPName = $scope.createPlayerName(1);
+		$scope.players.push({name:okPName, holes:[]});
 		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
 			$scope.players[$scope.players.length-1].holes[i] = 0;
 		}
-		console.log($scope.players);
+
+	}
+
+	$scope.createPlayerName = function (testNum) {
+		temp = ('Player ' + testNum);
+		for(i = 0; i < $scope.players.length; i++){
+			if($scope.players[i].name == ('Player ' + testNum)){
+				temp = $scope.createPlayerName(testNum + 1);
+				break;
+			}
+		}
+		return temp;
 	}
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
 	$scope.players = [];
-	$scope.playcnt = 1;
+	$scope.players.push({name:'Player 1', holes:[]});
 
 }]);
 
