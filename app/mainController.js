@@ -58,7 +58,7 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
 		okPName = $scope.createPlayerName(1);
-		$scope.players.push({name:okPName, holes:[]});
+		$scope.players.push({name:okPName, holes:[], score:0});
 		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
 			$scope.players[$scope.players.length-1].holes[i] = 0;
 		}
