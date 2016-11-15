@@ -80,14 +80,63 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		$scope.players.sort(function(a, b){
 			return a.score-b.score;
 		});
-		console.log("I´m  not a mess");
 	}
+
+	/*Function to see if the value is 0 or the maximum allowed,
+	 if so fade the buttons and disable them*/
+	$scope.fadeButton = function (p, pressedBtn) {
+		var id = $scope.players.indexOf(p);
+		var classLoc = pressedBtn;
+
+		if(p.holes[15] > 0 && classLoc == "negButton"){
+			//document.getElementById(id).textContent = "" + (numberOfThrows - 1);
+			--p.holes[15];
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
+		}
+		else if(p.holes[15] < 8 && classLoc == "posButton") {
+			//document.getElementById(id).textContent = "" + (numberOfThrows + 1);
+			++p.holes[15];
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
+		}
+
+		if(p.holes[15] == 0){
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+		else if(p.holes[15] == 8){
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+	}
+
+	/*Function to see if the value is 0 or the maximum allowed,
+	 if so fade the buttons and disable them
+	$scope.fadeButton = function (id, pressedBtn) {
+		var classLoc = pressedBtn;
+		var numberOfThrows = parseInt(document.getElementById(id).textContent);
+
+		if(document.getElementById(id).textContent > 0 && classLoc == "negButton"){
+			document.getElementById(id).textContent = "" + (numberOfThrows - 1);
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
+		}
+		else if(document.getElementById(id).textContent < 8 && classLoc == "posButton") {
+			document.getElementById(id).textContent = "" + (numberOfThrows + 1);
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
+		}
+
+		if(document.getElementById(id).textContent == 0){
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+		else if(document.getElementById(id).textContent == 8){
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+	}*/
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
+	$scope.courseChoice("de_dust_2");
 	$scope.players = [];
 	$scope.players.push({name:'Player 1', holes:[], score:1337});
+
 
 }]);
 

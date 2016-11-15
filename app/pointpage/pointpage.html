@@ -11,16 +11,16 @@
 <!-- use ng-repeat to get several components -->
 <div class="row addPointSpanner row-no-padding">
 	<div class="col-xs-12 col-no-padding" data-ng-repeat="p in players">
-		<div class="row playerName row-no-padding">p.name</div>
+		<div class="row playerName row-no-padding">{{p.name}}</div>
 
 		<div class="row pointRow row-no-padding"> <!-- think about all the cols from previous divs -->
 			<div class="col-xs-1"></div>
 			<div class="col-xs-2">
-				<div class="negButton glyphicon glyphicon-minus-sign" onclick="fadeButton('0', this)"><!--icon--></div><!--make id dynamic-->
+				<div class="negButton glyphicon glyphicon-minus-sign" ng-click="fadeButton(p, 'negButton', 15)"><!--icon--></div><!--make id dynamic-->
 			</div>
-			<div class="points col-xs-6" id="0">p.<!--points--></div><!--make id dynamic-->
+			<div class="points col-xs-6" id="{{players.indexOf(p)}}" ng-model=p.holes[15]>{{p.holes[15]}}<!--points--></div><!--make id dynamic-->
 			<div class="col-xs-2">
-				<div class="posButton glyphicon glyphicon-plus-sign" onclick="fadeButton('0', this)"><!--icon--></div><!--make id dynamic-->
+				<div class="posButton glyphicon glyphicon-plus-sign" ng-click="fadeButton(p, 'posButton', 15)"><!--icon--></div><!--make id dynamic-->
 			</div>
 			<div class="col-xs-1"></div>
 		</div>
