@@ -58,7 +58,7 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
 		okPName = $scope.createPlayerName(1);
-		$scope.players.push({name:okPName, holes:[], score:0});
+		$scope.players.push({name:okPName, holes:[], score:Math.floor(Math.random() * 100) + 1  });
 		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
 			$scope.players[$scope.players.length-1].holes[i] = 0;
 		}
@@ -75,12 +75,19 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		}
 		return temp;
 	}
+	
+	$scope.sortByScore = function () {
+		$scope.players.sort(function(a, b){
+			return a.score-b.score;
+		});
+		console.log("I´m  not a mess");
+	}
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
 	$scope.players = [];
-	$scope.players.push({name:'Player 1', holes:[]});
+	$scope.players.push({name:'Player 1', holes:[], score:1337});
 
 }]);
 
@@ -95,3 +102,13 @@ read.factory('readFile', ['$resource',
 		});
 	}
 ]);
+
+app.filter('startFrom', function() {
+	return function(input, start) {
+		if (input) {
+			start = +start;
+			return input.slice(start);
+		}
+		return[];
+	}
+});
