@@ -28,6 +28,10 @@
 	font-size: 30px;
 }
 
+.trackName{
+	font-size: 5.5vw;
+}
+
 .nameText{
 	top: 50%;
 	transform: translate(0%,-55%);
