@@ -18,12 +18,10 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		readFile.query({courseFileName: $scope.courseFileName},function(result){
 			$scope.courseInfo = result[0];
 		});
-		location.href = "#!/trackpage";
 	}
 
 	$scope.holeChoice = function (hNum) {
 		$scope.hole = hNum;
-		location.href = "#!/holepage";
 	}
 
 	//Reads in all the different coursenames
