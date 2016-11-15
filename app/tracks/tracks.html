@@ -1,12 +1,13 @@
 <!-- Top menu bar -->
 <div class="row menuBar">
 	<a href="#!/firstpage" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
-	<span class="col-xs-11">Banor</span>
+	<span class="col-xs-10 rubrik">Banor</span>
+	<div class="col-xs-1"></div>
 </div>
 
 <!-- The list with all the tracks -->
 <div class="row container">
-	<div class="col-xs-12 track" ng-repeat="c in courses | orderBy : 'name'" ng-click="courseChoice(c.name)"><a>{{c.name}}</a></div>
+	<a href="#!/trackpage"><div class="col-xs-12 track" ng-repeat="c in courses | orderBy : 'name'" ng-click="courseChoice(c.name)">{{c.name}}</div></a>
 	<!--<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Skyrim </a></div>
 	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Växjö Kloster </a></div>
 	<div class="col-xs-12 track" ng-click="courseChoice(this)"><a> Watchpoint Gibraltar </a></div>

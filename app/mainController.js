@@ -18,12 +18,10 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		readFile.query({courseFileName: $scope.courseFileName},function(result){
 			$scope.courseInfo = result[0];
 		});
-		location.href = "#!/trackpage";
 	}
 
 	$scope.holeChoice = function (hNum) {
 		$scope.hole = hNum;
-		location.href = "#!/holepage";
 	}
 
 	//Reads in all the different coursenames
@@ -34,6 +32,23 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		});
 	}
 
+
+	$scope.checkifPlayer = function () {
+		if($scope.players.length==0){
+			$scope.addPlayer();
+		}else{
+			for (var i = 0; i < $scope.players.length; i++) {
+				if($scope.players[i].holes.length != $scope.courseInfo.holes.length) {
+					$scope.players[i].holes = [];
+					for (var k = 0; k < $scope.courseInfo.holes.length ; k++) {
+						$scope.players[i].holes[k] = 0;
+					}
+				}
+			}
+		}
+	}
+
+
 	//Removes the player that is send in
 	$scope.removePlayer = function(item) {
 		var index = $scope.players.indexOf(item);
@@ -42,18 +57,37 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
-		$scope.players.push({name:'Player ' + $scope.playcnt, score:'0'});
-		++$scope.playcnt;
+		okPName = $scope.createPlayerName(1);
+		$scope.players.push({name:okPName, holes:[], score:Math.floor(Math.random() * 100) + 1  });
+		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
+			$scope.players[$scope.players.length-1].holes[i] = 0;
+		}
+
+	}
+
+	$scope.createPlayerName = function (testNum) {
+		temp = ('Player ' + testNum);
+		for(i = 0; i < $scope.players.length; i++){
+			if($scope.players[i].name == ('Player ' + testNum)){
+				temp = $scope.createPlayerName(testNum + 1);
+				break;
+			}
+		}
+		return temp;
+	}
+	
+	$scope.sortByScore = function () {
+		$scope.players.sort(function(a, b){
+			return a.score-b.score;
+		});
+		console.log("I´m  not a mess");
 	}
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
 	$scope.players = [];
-	$scope.playcnt = 1;
-	$scope.addPlayer();
-
-
+	$scope.players.push({name:'Player 1', holes:[], score:1337});
 
 }]);
 
@@ -68,3 +102,13 @@ read.factory('readFile', ['$resource',
 		});
 	}
 ]);
+
+app.filter('startFrom', function() {
+	return function(input, start) {
+		if (input) {
+			start = +start;
+			return input.slice(start);
+		}
+		return[];
+	}
+});
