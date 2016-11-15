@@ -30,3 +30,13 @@
 	height: calc(100vh - 75px);
 	overflow-y: scroll;
 }
+
+#winnarR {
+	background-image: url("winnar-R.png");
+	background-size: 20px;
+}
+
+#winnarL {
+	background-image: url("winnar-L.png");
+	background-size: 20px;
+}
