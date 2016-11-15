@@ -42,8 +42,12 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
-		$scope.players.push({name:'Player ' + $scope.playcnt, score:'0'});
+		$scope.players.push({name:'Player ' + $scope.playcnt, holes:[]});
 		++$scope.playcnt;
+		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
+			$scope.players[$scope.players.length-1].holes[i] = 0;
+		}
+		console.log($scope.players);
 	}
 
 	//Runs when the controller loads
@@ -51,9 +55,6 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	$scope.players = [];
 	$scope.playcnt = 1;
-	$scope.addPlayer();
-
-
 
 }]);
 
