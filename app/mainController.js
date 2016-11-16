@@ -55,8 +55,10 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Removes the player that is send in
 	$scope.removePlayer = function(item) {
-		var index = $scope.players.indexOf(item);
-		$scope.players.splice(index, 1);
+		if($scope.players.length > 1){
+			var index = $scope.players.indexOf(item);
+			$scope.players.splice(index, 1);
+		}
 	}
 
 	//Add a plyer to the list
