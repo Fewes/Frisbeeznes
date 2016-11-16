@@ -24,6 +24,10 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		$scope.hole = hNum;
 	}
 
+	$scope.goToPointPage = function () {
+		location.href ="#!/pointpage";
+	}
+
 	//Reads in all the different coursenames
 	$scope.courseOptions = function () {
 		$scope.courseFileName = "courses";
@@ -57,23 +61,34 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
-		okPName = $scope.createPlayerName(1);
-		$scope.players.push({name:okPName, holes:[], score:Math.floor(Math.random() * 100) + 1  });
-		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
-			$scope.players[$scope.players.length-1].holes[i] = 0;
+		if($scope.players.length < 5){				//Cap the maximum players to 5;
+			okPName = $scope.createPlayerName(1);
+			$scope.players.push({name:okPName, holes:[], score:Math.floor(Math.random() * 100) + 1  });
+			for (i = 0; i < $scope.courseInfo.holes.length; i++) {
+				$scope.players[$scope.players.length-1].holes[i] = 0;
+			}
 		}
 
 	}
 
 	$scope.createPlayerName = function (testNum) {
-		temp = ('Player ' + testNum);
-		for(i = 0; i < $scope.players.length; i++){
+		var temp = ('Player ' + testNum);
+		for(var i = 0; i < $scope.players.length; i++){
 			if($scope.players[i].name == ('Player ' + testNum)){
 				temp = $scope.createPlayerName(testNum + 1);
 				break;
 			}
 		}
 		return temp;
+	}
+
+	$scope.totalScore = function () {
+		for(var i = 0; i < $scope.players.length; i++){
+			$scope.players[i].score = 0;
+			for(var k = 0; k < $scope.players[i].holes.length; k++){
+				$scope.players[i].score += $scope.players[i].holes[k];
+			}
+		}
 	}
 	
 	$scope.sortByScore = function () {
@@ -88,52 +103,30 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		var id = $scope.players.indexOf(p);
 		var classLoc = pressedBtn;
 
-		if(p.holes[15] > 0 && classLoc == "negButton"){
+		if(p.holes[$scope.hole] > 0 && classLoc == "negButton"){
 			//document.getElementById(id).textContent = "" + (numberOfThrows - 1);
-			--p.holes[15];
+			--p.holes[$scope.hole];
 			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
 		}
-		else if(p.holes[15] < 8 && classLoc == "posButton") {
+		else if(p.holes[$scope.hole] < 8 && classLoc == "posButton") {
 			//document.getElementById(id).textContent = "" + (numberOfThrows + 1);
-			++p.holes[15];
+			++p.holes[$scope.hole];
 			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
 		}
 
-		if(p.holes[15] == 0){
+		if(p.holes[$scope.hole] == 0){
 			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
 		}
-		else if(p.holes[15] == 8){
+		else if(p.holes[$scope.hole] == 8){
 			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
 		}
 	}
-
-	/*Function to see if the value is 0 or the maximum allowed,
-	 if so fade the buttons and disable them
-	$scope.fadeButton = function (id, pressedBtn) {
-		var classLoc = pressedBtn;
-		var numberOfThrows = parseInt(document.getElementById(id).textContent);
-
-		if(document.getElementById(id).textContent > 0 && classLoc == "negButton"){
-			document.getElementById(id).textContent = "" + (numberOfThrows - 1);
-			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
-		}
-		else if(document.getElementById(id).textContent < 8 && classLoc == "posButton") {
-			document.getElementById(id).textContent = "" + (numberOfThrows + 1);
-			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
-		}
-
-		if(document.getElementById(id).textContent == 0){
-			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
-		}
-		else if(document.getElementById(id).textContent == 8){
-			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
-		}
-	}*/
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
 	$scope.courseChoice("de_dust_2");
+
 	$scope.players = [];
 	$scope.players.push({name:'Player 1', holes:[], score:1337});
 
