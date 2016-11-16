@@ -1,3 +1,6 @@
+.topBtnStart{
+	background-color:rgba(0,255,0,0.2);
+}
 .playerCont {
 	height: 75vh;
 	overflow-y: scroll;
@@ -9,14 +12,15 @@
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
-.addSign{
+.playerAdd .addSign{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	font-size: calc((100vh - 75px - 75vh) * 0.8);
+	color:rgba(0,255,0,0.2);
 }
 
-#playerDiv{
+.playerDiv{
 	/*padding-top:30px;*/
 	height: 90px;
 	border-bottom:1px solid rgba(255, 255, 255, 0.5);
@@ -26,6 +30,10 @@
 	top: 50%;
 	transform: translate(0%,-55%);
 	font-size: 30px;
+}
+
+.trackName{
+	font-size: 5.5vw;
 }
 
 .nameText{
@@ -43,4 +51,5 @@
 	left: 15px;
 	/*transform: translate(-50%,+50%);*/
 	font-size: 30px;
+	color: rgba(255,0,0,0.4);
 }

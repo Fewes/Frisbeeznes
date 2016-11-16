@@ -18,12 +18,10 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		readFile.query({courseFileName: $scope.courseFileName},function(result){
 			$scope.courseInfo = result[0];
 		});
-		location.href = "#!/trackpage";
 	}
 
 	$scope.holeChoice = function (hNum) {
 		$scope.hole = hNum;
-		location.href = "#!/holepage";
 	}
 
 	//Reads in all the different coursenames
@@ -34,6 +32,23 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 		});
 	}
 
+
+	$scope.checkifPlayer = function () {
+		if($scope.players.length==0){
+			$scope.addPlayer();
+		}else{
+			for (var i = 0; i < $scope.players.length; i++) {
+				if($scope.players[i].holes.length != $scope.courseInfo.holes.length) {
+					$scope.players[i].holes = [];
+					for (var k = 0; k < $scope.courseInfo.holes.length ; k++) {
+						$scope.players[i].holes[k] = 0;
+					}
+				}
+			}
+		}
+	}
+
+
 	//Removes the player that is send in
 	$scope.removePlayer = function(item) {
 		var index = $scope.players.indexOf(item);
@@ -42,19 +57,86 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
-		$scope.players.push({name:'Player ' + $scope.playcnt, holes:[]});
-		++$scope.playcnt;
+		okPName = $scope.createPlayerName(1);
+		$scope.players.push({name:okPName, holes:[], score:Math.floor(Math.random() * 100) + 1  });
 		for (i = 0; i < $scope.courseInfo.holes.length; i++) {
 			$scope.players[$scope.players.length-1].holes[i] = 0;
 		}
-		console.log($scope.players);
+
 	}
+
+	$scope.createPlayerName = function (testNum) {
+		temp = ('Player ' + testNum);
+		for(i = 0; i < $scope.players.length; i++){
+			if($scope.players[i].name == ('Player ' + testNum)){
+				temp = $scope.createPlayerName(testNum + 1);
+				break;
+			}
+		}
+		return temp;
+	}
+	
+	$scope.sortByScore = function () {
+		$scope.players.sort(function(a, b){
+			return a.score-b.score;
+		});
+	}
+
+	/*Function to see if the value is 0 or the maximum allowed,
+	 if so fade the buttons and disable them*/
+	$scope.fadeButton = function (p, pressedBtn) {
+		var id = $scope.players.indexOf(p);
+		var classLoc = pressedBtn;
+
+		if(p.holes[15] > 0 && classLoc == "negButton"){
+			//document.getElementById(id).textContent = "" + (numberOfThrows - 1);
+			--p.holes[15];
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
+		}
+		else if(p.holes[15] < 8 && classLoc == "posButton") {
+			//document.getElementById(id).textContent = "" + (numberOfThrows + 1);
+			++p.holes[15];
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
+		}
+
+		if(p.holes[15] == 0){
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+		else if(p.holes[15] == 8){
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+	}
+
+	/*Function to see if the value is 0 or the maximum allowed,
+	 if so fade the buttons and disable them
+	$scope.fadeButton = function (id, pressedBtn) {
+		var classLoc = pressedBtn;
+		var numberOfThrows = parseInt(document.getElementById(id).textContent);
+
+		if(document.getElementById(id).textContent > 0 && classLoc == "negButton"){
+			document.getElementById(id).textContent = "" + (numberOfThrows - 1);
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
+		}
+		else if(document.getElementById(id).textContent < 8 && classLoc == "posButton") {
+			document.getElementById(id).textContent = "" + (numberOfThrows + 1);
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
+		}
+
+		if(document.getElementById(id).textContent == 0){
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+		else if(document.getElementById(id).textContent == 8){
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
+		}
+	}*/
 
 	//Runs when the controller loads
 	$scope.courseOptions();
 
+	$scope.courseChoice("de_dust_2");
 	$scope.players = [];
-	$scope.playcnt = 1;
+	$scope.players.push({name:'Player 1', holes:[], score:1337});
+
 
 }]);
 
@@ -69,3 +151,13 @@ read.factory('readFile', ['$resource',
 		});
 	}
 ]);
+
+app.filter('startFrom', function() {
+	return function(input, start) {
+		if (input) {
+			start = +start;
+			return input.slice(start);
+		}
+		return[];
+	}
+});

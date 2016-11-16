@@ -7,17 +7,13 @@
 	padding-left: 	15px;
 	padding-right: 	15px;
 }
-/*Back-icon */
-.glyphicon-chevron-left{
-	font-size: 30px;
-	top: -5px !important;
-}
 /*A list object */
 .hole{
 	text-align: center;
-	font-size: 30px;
+	font-size: 28px;
 	height: 60px;
 	border-bottom: solid white 2px;
+	line-height: 60px;
 }
 /*The div that holds all the list objects */
 .container{
