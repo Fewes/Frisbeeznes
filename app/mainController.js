@@ -65,7 +65,7 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 	$scope.addPlayer = function() {
 		if($scope.players.length < 5){				//Cap the maximum players to 5;
 			okPName = $scope.createPlayerName(1);
-			$scope.players.push({name:okPName, holes:[], score:Math.floor(Math.random() * 100) + 1  });
+			$scope.players.push({name:okPName, holes:[], score:0});
 			for (i = 0; i < $scope.courseInfo.holes.length; i++) {
 				$scope.players[$scope.players.length-1].holes[i] = 0;
 			}
@@ -127,10 +127,10 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 	//Runs when the controller loads
 	$scope.courseOptions();
 
-	$scope.courseChoice("de_dust_2");
+	//$scope.courseChoice("de_dust_2");
 
 	$scope.players = [];
-	$scope.players.push({name:'Player 1', holes:[], score:1337});
+	//$scope.players.push({name:'Player 1', holes:[], score:1337});
 
 
 }]);
