@@ -8,15 +8,18 @@
 
 	<div class="playerDiv" data-ng-repeat="p in players">
 		<span class="number col-xs-2">{{players.indexOf(p) + 1}}</span>  <!-- Need to fix this somehow. Not sure how-->
-		<input class="nameText col-xs-7" type="text" ng-model=p.name>
+		<input class="nameText col-xs-7" type="text" ng-model=p.name onClick="this.setSelectionRange(0, this.value.length)">
 		<div class="col-xs-3 removeOuterDiv">
 			<div class="removeInnerDiv glyphicon glyphicon-minus-sign" ng-click="removePlayer(p)"></div>
 		</div>
 	</div>
+	<div class="addSign glyphicon glyphicon-plus-sign" ng-click="addPlayer()"> </div>
 
 </div>
 
+<!--
 <div class="playerAdd" ng-click="addPlayer()">
 	<div class="addSign glyphicon glyphicon-plus-sign"> </div>
 
 </div>
+-->
