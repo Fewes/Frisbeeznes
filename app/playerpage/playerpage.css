@@ -18,7 +18,7 @@
 }
 
 .addSign{
-	top: 50%;
+	/*top: 50%; Not needed when the sign is right under */
 	left: 50%;
 	padding-top: 5px;
 	transform: translate(-50%,0%);

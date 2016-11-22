@@ -1,8 +1,8 @@
 var app = angular.module('myApp.mainmodule',[]);
 var read = angular.module('myApp.read', ['ngResource']);
 
-app.controller('mainCtrl', ["$scope", "readFile",
-	function($scope, readFile) {
+app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', '$timeout',
+	function($scope, readFile, $anchorScroll, $location, $timeout) {
 
 	//Reads in all the info about the choosen course and redirect to the trackpage
 	$scope.courseChoice = function (cName) {
@@ -38,9 +38,10 @@ app.controller('mainCtrl', ["$scope", "readFile",
 	}
 
 
-	$scope.checkifPlayer = function () {
+	$scope.reWritePlayers = function () {
 		if($scope.players.length != 0){
 			for (var i = 0; i < $scope.players.length; i++) {
+				$scope.players[i].score = 0;
 				$scope.players[i].holes = [];
 				for (var k = 0; k < $scope.courseInfo.holes.length ; k++) {
 					$scope.players[i].holes[k] = 0;
@@ -68,18 +69,16 @@ app.controller('mainCtrl', ["$scope", "readFile",
 			for (var i = 0; i < $scope.courseInfo.holes.length; i++) {
 				$scope.players[$scope.players.length-1].holes[i] = 0;
 			}
-			//document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].focus();
-			//document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].setSelectionRange(0, document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].value.length)
-			//document.getElementsByClassName("topBtnStart")[0].click();
 		}
 	}
 
-	$scope.testing = function () {
-		document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0].focus();
-		document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0].setSelectionRange(0, document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].value.length);
-
-		document.getElementsByClassName("playerCont")[0].scrollTop = 0;
-		//$location.hash('bottom');
+	$scope.markPlayer = function () {
+		$timeout(function () {
+			var elementet = document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0];
+			elementet.focus();
+			elementet.setSelectionRange(0, elementet.value.length);
+			document.getElementsByClassName("playerCont")[0].scrollTop = 10000; //Just a high value to ensure it´s always scrolls
+		})
 	}
 
 	$scope.createPlayerName = function (testNum) {

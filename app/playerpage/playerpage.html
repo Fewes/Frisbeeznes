@@ -6,7 +6,7 @@
 
 <div class="playerCont">
 
-	<div class="playerDiv" data-ng-repeat="p in players" data-ng-init="testing()">
+	<div id="anchor {{players.indexOf(p)}}" class="playerDiv anchor" data-ng-repeat="p in players" data-ng-init="markPlayer()">
 		<span class="number col-xs-2">{{players.indexOf(p) + 1}}</span>  <!-- Need to fix this somehow. Not sure how-->
 		<input class="nameText col-xs-7" type="text" ng-model=p.name onClick="this.setSelectionRange(0, this.value.length)">
 		<div class="col-xs-3 removeOuterDiv">
