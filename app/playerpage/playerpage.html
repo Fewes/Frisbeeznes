@@ -1,12 +1,12 @@
 <div class="topBar">
 	<a href="#!/trackpage" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
-	<span class="trackName col-xs-7">Players</span>
-	<a href="#!/scorecard" class="btn btn-default topBtn topBtnStart col-xs-3">Starta</a>
+	<span class="trackName col-xs-7">Spelare</span>
+	<a href="#!/scorecard" ng-class="btnActive" class="btn btn-default topBtn topBtnStart col-xs-3">Starta</a>
 </div>
 
 <div class="playerCont">
 
-	<div class="playerDiv" data-ng-repeat="p in players">
+	<div class="playerDiv" data-ng-repeat="p in players" data-ng-init="testing()">
 		<span class="number col-xs-2">{{players.indexOf(p) + 1}}</span>  <!-- Need to fix this somehow. Not sure how-->
 		<input class="nameText col-xs-7" type="text" ng-model=p.name onClick="this.setSelectionRange(0, this.value.length)">
 		<div class="col-xs-3 removeOuterDiv">

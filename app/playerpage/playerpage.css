@@ -1,6 +1,11 @@
 .topBtnStart{
 	background-color:rgba(0,255,0,0.2);
 }
+
+.disabled{
+	background-color: rgba(191,191,191,0.2);
+}
+
 .playerCont {
 	height: calc(100vh - 75px);
 	overflow-y: scroll;

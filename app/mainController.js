@@ -1,7 +1,8 @@
 var app = angular.module('myApp.mainmodule',[]);
 var read = angular.module('myApp.read', ['ngResource']);
 
-app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
+app.controller('mainCtrl', ["$scope", "readFile",
+	function($scope, readFile) {
 
 	//Reads in all the info about the choosen course and redirect to the trackpage
 	$scope.courseChoice = function (cName) {
@@ -38,15 +39,11 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 
 	$scope.checkifPlayer = function () {
-		if($scope.players.length==0){
-			$scope.addPlayer();
-		}else{
+		if($scope.players.length != 0){
 			for (var i = 0; i < $scope.players.length; i++) {
-				if($scope.players[i].holes.length != $scope.courseInfo.holes.length) {
-					$scope.players[i].holes = [];
-					for (var k = 0; k < $scope.courseInfo.holes.length ; k++) {
-						$scope.players[i].holes[k] = 0;
-					}
+				$scope.players[i].holes = [];
+				for (var k = 0; k < $scope.courseInfo.holes.length ; k++) {
+					$scope.players[i].holes[k] = 0;
 				}
 			}
 		}
@@ -55,22 +52,34 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	//Removes the player that is send in
 	$scope.removePlayer = function(item) {
-		if($scope.players.length > 1){
-			var index = $scope.players.indexOf(item);
-			$scope.players.splice(index, 1);
+		var index = $scope.players.indexOf(item);
+		$scope.players.splice(index, 1);
+		if($scope.players.length == 0){
+			$scope.btnActive = {"disabled":true};
 		}
 	}
 
 	//Add a plyer to the list
 	$scope.addPlayer = function() {
+		$scope.btnActive = {"disabled":false};
 		if($scope.players.length < 5){				//Cap the maximum players to 5;
-			okPName = $scope.createPlayerName(1);
+			var okPName = $scope.createPlayerName(1);
 			$scope.players.push({name:okPName, holes:[], score:0});
-			for (i = 0; i < $scope.courseInfo.holes.length; i++) {
+			for (var i = 0; i < $scope.courseInfo.holes.length; i++) {
 				$scope.players[$scope.players.length-1].holes[i] = 0;
 			}
+			//document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].focus();
+			//document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].setSelectionRange(0, document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].value.length)
+			//document.getElementsByClassName("topBtnStart")[0].click();
 		}
+	}
 
+	$scope.testing = function () {
+		document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0].focus();
+		document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0].setSelectionRange(0, document.getElementsByClassName("playerDiv")[1].getElementsByClassName("nameText")[0].value.length);
+
+		document.getElementsByClassName("playerCont")[0].scrollTop = 0;
+		//$location.hash('bottom');
 	}
 
 	$scope.createPlayerName = function (testNum) {
@@ -131,7 +140,7 @@ app.controller('mainCtrl', ["$scope", "readFile", function($scope, readFile) {
 
 	$scope.players = [];
 	//$scope.players.push({name:'Player 1', holes:[], score:1337});
-
+	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
 }]);
 
