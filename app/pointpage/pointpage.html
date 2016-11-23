@@ -1,10 +1,30 @@
 <!-- add slide down animation on whole page -->
-<div class="row menuSpanner row-no-padding">
-	<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-left" data-ng-click="totalScore()"><!--icon --></a>
-	<div class="col-xs-6">
-		<div class="row holeInfo">Hål: {{hole + 1}}</div>
+
+<div class="topBar"><div class="topBarItem">
+	<a href="#!/scorecard" class="glyphicon glyphicon-chevron-down" data-ng-click="totalScore()"><!--icon --></a>
+</div></div>
+
+<div class="row menuSpannerTall row-no-padding">
+	<div class="menuSpannerControlsContainer">
+		<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-left" data-ng-click="totalScore()"><!--icon --></a>
+		<div class="col-xs-6">
+			<div class="row holeInfo"><div class="holeInfoInside">HÅL&nbsp{{hole + 1}}</div></div>
+		</div>
+		<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-right" data-ng-click="totalScore()"><!--icon --></a>
 	</div>
-	<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-right" data-ng-click="totalScore()"><!--icon --></a>
+	<div class="menuSpannerImageContainer"><div class="menuSpannerImage"></div></div>
+	<div class="menuSpannerImageInfoboxPositioner">
+		<div class ="menuSpannerImageInfobox">
+			<div class="menuSpannerHoleInfo">
+				Par: {{courseInfo.holes[hole].par}}
+				<br>
+				Avstånd: {{courseInfo.holes[hole].distance}}m
+			</div>
+			<div class="menuSpannerHoleMap">
+
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- use ng-repeat to get several components -->
