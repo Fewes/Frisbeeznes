@@ -105,13 +105,18 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		if($scope.players.holes)
 		for(var i = 0; i < $scope.players.length; ++i) {
 			for(var k = 0; k < $scope.courseInfo.holes.length; ++k) {
-				if ($scope.courseInfo.holes[k].par < $scope.players[i].holes[k]) {
+				if($scope.players[i].holes[k] != 0) {
+					if ($scope.courseInfo.holes[k].par < $scope.players[i].holes[k]) {
 
-				}
-				else if ($scope.courseInfo.holes[k].par > $scope.players[i].holes[k]) {
+					}
+					else if ($scope.courseInfo.holes[k].par > $scope.players[i].holes[k]) {
 
+					}
+					else if ($scope.courseInfo.holes[k].par == $scope.players[i].holes[k]) {
+
+					}
 				}
-				 else if ($scope.courseInfo.holes[k].par == $scope.players[i].holes[k]) {
+				else {
 
 				}
 			}
@@ -159,13 +164,18 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
 	//to plesure felix
-	$scope.courseChoice("de_dust2");
-	$scope.holeChoice(4);
-	$scope.addPlayer();
-	$scope.addPlayer();
-	$scope.addPlayer();
-	$scope.addPlayer();
-	$scope.addPlayer();
+		$scope.courseOptions();
+		$scope.courseChoice("de_dust2");
+
+		$timeout(function () {
+			$scope.holeChoice(4);
+			$scope.addPlayer();
+			$scope.addPlayer();
+			$scope.addPlayer();
+			$scope.addPlayer();
+			$scope.addPlayer();
+		});
+
 
 }]);
 
