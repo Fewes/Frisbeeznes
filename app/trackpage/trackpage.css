@@ -34,7 +34,10 @@
 
 .glyphicon-chevron-left{
 	font-size: 30px;
-	top: -5px !important;
+}
+
+.glyphicon-chevron-right{
+	font-size: 30px;
 }
 
 .topBtn {

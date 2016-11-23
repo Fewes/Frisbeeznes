@@ -1,11 +1,10 @@
 <!-- add slide down animation on whole page -->
 <div class="row menuSpanner row-no-padding">
-	<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-up" data-ng-click="totalScore()"><!--icon --></a>
-	<div class="col-xs-5">
-		<div class="row holeInfo">Hål: {{hole + 1}}<!-- holenumber--></div>
-		<div class="row parInfo">Par: {{courseInfo.holes[hole].par}}<!--parinfo--></div>
+	<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-left" data-ng-click="totalScore()"><!--icon --></a>
+	<div class="col-xs-6">
+		<div class="row holeInfo">Hål: {{hole + 1}}</div>
 	</div>
-	<a class="btn btn-danger col-xs-3 buttonPos" role="button" data-ng-click="holeChoice(hole + 1); goToPointPage()">Next Hole<!--next hole or finish button--></a>
+	<a href="#!/scorecard" class="col-xs-3 glyphicon glyphicon-chevron-right" data-ng-click="totalScore()"><!--icon --></a>
 </div>
 
 <!-- use ng-repeat to get several components -->
