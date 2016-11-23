@@ -1,8 +1,12 @@
 var app = angular.module('myApp.mainmodule',[]);
 var read = angular.module('myApp.read', ['ngResource']);
 
-app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', '$timeout',
-	function($scope, readFile, $anchorScroll, $location, $timeout) {
+app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', '$timeout',	function($scope, readFile, $anchorScroll, $location, $timeout) {
+
+	//used to select the animation to be used
+	$scope.animationTypeSelection = function (animationName) {
+		$scope.animationTypeClass = animationName;
+	}
 
 	//Reads in all the info about the choosen course and redirect to the trackpage
 	$scope.courseChoice = function (cName) {
@@ -158,6 +162,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 
 	//Runs when the controller loads
 	$scope.courseOptions();
+	$scope.animationTypeClass = "slide-right";
 
 	//$scope.courseChoice("de_dust_2");
 

@@ -96,7 +96,7 @@
   opacity: 1;
 }
 /* line 122, ../sass/ng-animation.scss */
-.slide-top.ng-leave {
+.slide-down.ng-leave {
   transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
@@ -105,7 +105,7 @@
   opacity: 1;
 }
 /* line 128, ../sass/ng-animation.scss */
-.slide-top.ng-leave-active {
+.slide-down.ng-leave-active {
   transform: translateY(60px);
   -ms-transform: translateY(60px);
   -webkit-transform: translateY(60px);
@@ -352,7 +352,7 @@
   opacity: 1;
 }
 /* line 284, ../sass/ng-animation.scss */
-.slide-down.ng-leave {
+.slide-top.ng-leave {
   transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
@@ -361,7 +361,7 @@
   opacity: 1;
 }
 /* line 290, ../sass/ng-animation.scss */
-.slide-down.ng-leave-active {
+.slide-top.ng-leave-active {
   transform: translateY(-60px);
   -ms-transform: translateY(-60px);
   -webkit-transform: translateY(-60px);

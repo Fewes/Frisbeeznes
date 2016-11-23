@@ -1,8 +1,8 @@
 <div class="topBar">
-	<a href="#!/tracks" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
+	<a data-ng-click="animationTypeSelection('slide-left')" href="#!/tracks" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
 	<span class="trackName col-xs-7" >{{courseInfo.name}}</span>
 	<!-- <span class="col-xs-1"></span> -->
-	<a href="#!/playerpage" data-ng-click="reWritePlayers()" class="btn btn-default topBtn col-xs-3" role="button">Vidare</a> <!-- Här ska tätt plater sak göras -->
+	<a data-ng-click="animationTypeSelection('slide-right')" href="#!/playerpage" data-ng-click="reWritePlayers()" class="btn btn-default topBtn col-xs-3" role="button">Vidare</a> <!-- Här ska tätt plater sak göras -->
 
 </div>
 
@@ -15,6 +15,6 @@
 
 	<div class="infoText">
 		<span class="col-xs-12 trackText">{{courseInfo.description}}</span>
-		<a href="#!/holes" class="btn btn-info infoTextBtn col-xs-3">Hålinfo</a>
+		<a data-ng-click="animationTypeSelection('slide-right')" href="#!/holes" class="btn btn-info infoTextBtn col-xs-3">Hålinfo</a>
 	</div>
 </div>
