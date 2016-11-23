@@ -100,6 +100,23 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 			}
 		}
 	}
+
+	$scope.overUnderPar = function() {
+		if($scope.players.holes)
+		for(var i = 0; i < $scope.players.length; ++i) {
+			for(var k = 0; k < $scope.courseInfo.holes.length; ++k) {
+				if ($scope.courseInfo.holes[k].par < $scope.players[i].holes[k]) {
+
+				}
+				else if ($scope.courseInfo.holes[k].par > $scope.players[i].holes[k]) {
+
+				}
+				 else if ($scope.courseInfo.holes[k].par == $scope.players[i].holes[k]) {
+
+				}
+			}
+		}
+	}
 	
 	$scope.sortByScore = function () {
 		$scope.players.sort(function(a, b){
@@ -141,6 +158,14 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	//$scope.players.push({name:'Player 1', holes:[], score:1337});
 	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
+	//to plesure felix
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.courseChoice("de_dust2");
+	$scope.holeChoice(4);
 }]);
 
 read.factory('readFile', ['$resource',
