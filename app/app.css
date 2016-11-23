@@ -38,3 +38,8 @@ body {
 	content: "";
 	padding: 0;
 }
+
+.view-frame{
+	position: absolute;
+	width: 100vw;
+}
