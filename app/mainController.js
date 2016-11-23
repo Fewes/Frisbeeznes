@@ -159,13 +159,14 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
 	//to plesure felix
-	$scope.addPlayer();
-	$scope.addPlayer();
-	$scope.addPlayer();
-	$scope.addPlayer();
-	$scope.addPlayer();
 	$scope.courseChoice("de_dust2");
 	$scope.holeChoice(4);
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.addPlayer();
+	$scope.addPlayer();
+
 }]);
 
 read.factory('readFile', ['$resource',
