@@ -1,8 +1,8 @@
 <div class="row menuSpanner">
 	<div class="row menuTitle">
-		<a href="#!/playerpage" class="glyphicon glyphicon-chevron-left col-xs-1" style="display:table-cell; vertical-align: middle;"></a>
+		<a data-ng-click="animationTypeSelection('slide-left')" href="#!/playerpage" class="glyphicon glyphicon-chevron-left col-xs-1" style="display:table-cell; vertical-align: middle;"></a>
 		<div class="col-xs-7" style="display:table-cell;vertical-align: middle;">{{courseName}}</div>
-		<a href="#!/result" class="btn btn-danger col-xs-3" role="button" ng-click="sortByScore()">Avsluta Spel</a>
+		<a data-ng-click="animationTypeSelection('slide-right')" href="#!/result" class="btn btn-danger col-xs-3" role="button" ng-click="sortByScore()">Avsluta Spel</a>
 	</div>
 </div>
 
@@ -33,7 +33,7 @@
 <!-- Overflow gradients END -->
 
 <div class="cardSpanner" data-ng-init="totalScore(); overUnderPar()"> <!-- container for correct padding -->
-	<div class="row row-no-padding" ng-repeat="h in courseInfo.holes" ng-if="$index >= 0" data-ng-click="holeChoice(h.hole - 1); goToPointPage()">
+	<div class="row row-no-padding" ng-repeat="h in courseInfo.holes" ng-if="$index >= 0" data-ng-click="animationTypeSelection('slide-top'); holeChoice(h.hole - 1); goToPointPage()">
 		<div class="col-xs-2 squareTitle"><div class="squareContent">{{h.hole}}</div></div>
 
 		<div class="playerSquare titleSquare col-xs-2" ng-repeat="p in players" ng-if="$index >= 0">
