@@ -1,10 +1,10 @@
-.topBar {
+/*.topBar {
     background-color: rgba(255, 255, 255, 0.25);
     height:75px;
     border-bottom:1px solid rgba(255, 255, 255, 0.5);
     padding-top:25px;
 	padding-right: 15px;
-}
+}*/
 
 .trackCont {
 	height: calc(100vh - 75px);
@@ -23,8 +23,12 @@
 	font-size:4vw;
 	height: calc(100vh - 50vh - 75px);
 }
-.trackName {
+.menuSpanner .text{
 	font-size: 5.5vw;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	height: 100%;
 }
 
 .trackText {
@@ -41,8 +45,13 @@
 }
 
 .topBtn {
-	top: -7px;
-	font-size: 5vw;
+	/*top: -7px;
+	font-size: 5vw;*/
+	height: 100%;
+}
+
+.topBtnDiv{
+	height: 100%;
 }
 
 .infoTextBtn {

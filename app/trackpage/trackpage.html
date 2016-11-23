@@ -1,9 +1,7 @@
-<div class="topBar">
+<div class="menuSpanner">
 	<a data-ng-click="animationTypeSelection('slide-left')" href="#!/tracks" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
-	<span class="trackName col-xs-7" >{{courseInfo.name}}</span>
-	<!-- <span class="col-xs-1"></span> -->
-	<a data-ng-click="animationTypeSelection('slide-right')" href="#!/playerpage" data-ng-click="reWritePlayers()" class="btn btn-default topBtn col-xs-3" role="button">Vidare</a> <!-- Här ska tätt plater sak göras -->
-
+	<div class="text col-xs-7" ><span>{{courseInfo.name}}</span></div>
+	<div class="col-xs-3 topBtnDiv"><a data-ng-click="animationTypeSelection('slide-right')" href="#!/playerpage" data-ng-click="reWritePlayers()" class="btn btn-default topBtn" role="button">Vidare</a></div>
 </div>
 
 <div class="trackCont">

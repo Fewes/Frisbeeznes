@@ -39,8 +39,16 @@
 	font-size: 30px;
 }
 
-.trackName{
+.menuSpanner .text{
 	font-size: 5.5vw;
+	text-align: center;
+	height: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.menuSpanner .text span{
+	vertical-align: middle;
 }
 
 .nameText{

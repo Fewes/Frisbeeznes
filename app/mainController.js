@@ -30,7 +30,9 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	}
 
 	$scope.goToPointPage = function () {
-		location.href ="#!/pointpage";
+		$timeout(function () {
+			location.href ="#!/pointpage";
+		})
 	}
 
 	//Reads in all the different coursenames
