@@ -10,13 +10,15 @@
 /*The back-icon */
 .glyphicon-chevron-left{
 	font-size: 30px;
-	top: -5px !important;
-	line-height: 25px;
 }
-/*A list object */
+/*The forward-icon */
+.right-arrow{
+	transform: translate(50%, -200%);
+}
+	/*A list object */
 .track{
-	text-align: center;
-	font-size: 28px;
+	text-align: left;
+	font-size: 24px;
 	height: 70px;
 	border-bottom: solid white 2px;
 	line-height: 70px;
@@ -31,4 +33,11 @@
 	text-align: center;
 	font-size: 28px;
 	line-height: 28px;
+}
+
+a.fill-div{
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
 }
