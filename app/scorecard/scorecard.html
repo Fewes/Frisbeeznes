@@ -2,7 +2,7 @@
 	<div class="row menuTitle">
 		<a href="#!/playerpage" class="glyphicon glyphicon-chevron-left col-xs-1" style="display:table-cell; vertical-align: middle;"></a>
 		<div class="col-xs-7" style="display:table-cell;vertical-align: middle;">{{courseName}}</div>
-		<a href="#!/result" class="btn btn-danger col-xs-3" role="button" ng-click="sortByScore()">Avsluta</a>
+		<a href="#!/result" class="btn btn-danger col-xs-3" role="button" ng-click="sortByScore()">Avsluta Spel</a>
 	</div>
 </div>
 
@@ -12,12 +12,6 @@
 	<div class="col-xs-2 titleSquare" ng-repeat="f in players" ng-if="$index >= 0">
 		<div class="squareContent">{{f.name.charAt(0)}}</div>
 	</div>
-
-	<!-- <div class="col-xs-2 titleSquare"><div class="squareContent">T</div></div>
-	<div class="col-xs-2 titleSquare"><div class="squareContent">F</div></div>
-	<div class="col-xs-2 titleSquare"><div class="squareContent">O</div></div>
-	<div class="col-xs-2 titleSquare"><div class="squareContent">E</div></div>
-	<div class="col-xs-2 titleSquare"><div class="squareContent">M</div></div> -->
 </div>
 
 <!-- Overflow gradients -->
@@ -38,122 +32,17 @@
 <div class="above"></div>
 <!-- Overflow gradients END -->
 
-<div class="cardSpanner"> <!-- container for correct padding -->
-
+<div class="cardSpanner" data-ng-init="totalScore(); overUnderPar()"> <!-- container for correct padding -->
 	<div class="row row-no-padding" ng-repeat="h in courseInfo.holes" ng-if="$index >= 0" data-ng-click="holeChoice(h.hole - 1); goToPointPage()">
 		<div class="col-xs-2 squareTitle"><div class="squareContent">{{h.hole}}</div></div>
 
-		<div class="col-xs-2 titleSquare" ng-repeat="p in players" ng-if="$index >= 0">
+		<div class="playerSquare titleSquare col-xs-2" ng-repeat="p in players" ng-if="$index >= 0">
 			<div class="squareContent">{{p.holes[h.hole-1]}}</div>
 		</div>
 	</div>
-
-	<!--
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">5</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">6</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">7</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">8</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">9</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">10</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">11</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	<div class="row row-no-padding">
-		<div class="col-xs-2 squareTitle"><div class="squareContent">12</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">4</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">2</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">1</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-		<div class="col-xs-2 square"><div class="squareContent">3</div></div>
-	</div>
-	-->
 </div>
 
 <div class="row scoreSpanner row-no-padding"> <!-- container for correct padding -->
 	<div class="col-xs-2 square2"><div class="squareContent">Tot</div></div>
 	<div class="col-xs-2 square2" data-ng-repeat="p in players"><div class="squareContent">{{p.score}}</div></div>
-	<!--<div class="col-xs-2 square2"><div class="squareContent">48</div></div>
-	<div class="col-xs-2 square2"><div class="squareContent">24</div></div>
-	<div class="col-xs-2 square2"><div class="squareContent">12</div></div>
-	<div class="col-xs-2 square2"><div class="squareContent">36</div></div>
-	<div class="col-xs-2 square2"><div class="squareContent">36</div></div>-->
 </div>

@@ -7,6 +7,16 @@
 	padding-left: 	15px;
 	padding-right: 	15px;
 }
+
+#btn-done{
+	background-color: green;
+	border: none;
+	color: white;
+	text-align: left;
+	padding: 10px 15px;
+	margin-right: 0px;
+}
+
 /*The list object displaying the winner */
 .winner{
 	text-align: center;

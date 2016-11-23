@@ -102,25 +102,27 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	}
 
 	$scope.overUnderPar = function() {
-		if($scope.players.holes)
-		for(var i = 0; i < $scope.players.length; ++i) {
-			for(var k = 0; k < $scope.courseInfo.holes.length; ++k) {
-				if($scope.players[i].holes[k] != 0) {
-					if ($scope.courseInfo.holes[k].par < $scope.players[i].holes[k]) {
+		$timeout(function () {
+			for(var i = 0; i < $scope.players.length; i++) {
+				for(var k = 0; k < $scope.courseInfo.holes.length; k++) {
+					if($scope.players[i].holes[k] != 0) {
 
+						var className = document.getElementsByClassName("playerSquare");
+
+						if ($scope.courseInfo.holes[k].par < $scope.players[i].holes[k]) {
+							className[$scope.players.length*k+i].style.backgroundColor = "rgba(255,0,0,0.2)";
+						}
+						else if ($scope.courseInfo.holes[k].par > $scope.players[i].holes[k]) {
+							className[$scope.players.length*k+i].style.backgroundColor = "rgba(0,255,0,0.2)";
+						}
+						else if ($scope.courseInfo.holes[k].par == $scope.players[i].holes[k]) {
+							className[$scope.players.length*k+i].style.backgroundColor = "rgba(255, 255, 255, 0.25)";
+						}
 					}
-					else if ($scope.courseInfo.holes[k].par > $scope.players[i].holes[k]) {
-
-					}
-					else if ($scope.courseInfo.holes[k].par == $scope.players[i].holes[k]) {
-
-					}
-				}
-				else {
-
 				}
 			}
-		}
+		});
+
 	}
 	
 	$scope.sortByScore = function () {

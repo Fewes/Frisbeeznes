@@ -1,8 +1,8 @@
 <!-- Top menu bar -->
 <div class="row menuBar">
-	<span class="col-xs-4">RESULTAT</span>
-	<div class="col-xs-4"></div>
-	<a href="#!/startpage" class="col-xs-4 btn btn-default topBtn">KLAR</a>
+	<a href="#!/scorecard" class="glyphicon glyphicon-chevron-left col-xs-2"></a>
+	<span class="col-xs-8 rubrik">Resultat</span>
+	<a href="#!/firstpage" id="btn-done" class="col-xs-2">KLAR</a>
 </div>
 
 <!-- The list displaying the result -->
@@ -12,14 +12,14 @@
 			<div>
 				<div class="col-xs-8">{{players[0].name}} </div>
 				<div class="col-xs-4 sub">Kast: {{players[0].score}}</div>
-				<div class="col-xs-4 sub">Par: 4</div>
+				<div class="col-xs-4 sub">Par: {{players[0].par}}</div>
 			</div>
 		<div id="winnerR" class="col-xs-2"></div>
 	</div>
 
 	<div class="col-xs-12 losers" data-ng-repeat="p in players | startFrom : 1">
 		<div class="col-xs-12">{{p.name}} </div>
-		<div class="col-xs-6 sub">Kast:{{p.score}} </div>
-		<div class="col-xs-6 sub">Par: 10</div>
+		<div class="col-xs-6 sub">Kast: {{p.score}} </div>
+		<div class="col-xs-6 sub">Par: {{p.par}}</div>
 	</div>
 </div>
