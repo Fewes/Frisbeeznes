@@ -130,7 +130,10 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		});
 	}
 
+	//work in progress
 	$scope.allHolesPlayed = function(ev) {
+
+		console.log("funk");
 
 		$scope.customFullscreen = false;
 		var i = 0, k = 0, done = false;
@@ -144,19 +147,21 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 				done = true;
 				var finish = $mdDialog.confirm()
 					.title('Vill du verkligen avsluta?')
+					.textContent("Du kommer att lämna sidan om du klickar att gå vidare!")
 					.targetEvent(ev)
 					.ok('Ja, jag vill avsluta')
 					.cancel('Jag vill fortsätta spela');
 
 				$mdDialog.show(confirm).then(function() {
-					//End game
+					console.log("ja knapp");
+					location.href ="#!/result";
 				}, function(){
-					//Continue game
+					return false;
 				});
-			}
+			};
 
-		}
-	}
+		};
+	};
 	
 	$scope.sortByScore = function () {
 		$scope.players.sort(function(a, b){
