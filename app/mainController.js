@@ -1,7 +1,7 @@
 var app = angular.module('myApp.mainmodule',[]);
 var read = angular.module('myApp.read', ['ngResource']);
 
-app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', '$timeout',	function($scope, readFile, $anchorScroll, $location, $timeout) {
+app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', '$timeout',	function($scope, readFile, $anchorScroll, $location, $timeout, $mdDialog) {
 
 	//used to select the animation to be used
 	$scope.animationTypeSelection = function (animationName) {
@@ -128,7 +128,34 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 				}
 			}
 		});
+	}
 
+	$scope.allHolesPlayed = function(ev) {
+
+		$scope.customFullscreen = false;
+		var i = 0, k = 0, done = false;
+
+		while($scope.players[i].holes[k] != 0 && k != 18){
+			if(done != true){
+				i++;
+				k++;
+			}
+			else {
+				done = true;
+				var finish = $mdDialog.confirm()
+					.title('Vill du verkligen avsluta?')
+					.targetEvent(ev)
+					.ok('Ja, jag vill avsluta')
+					.cancel('Jag vill fortsätta spela');
+
+				$mdDialog.show(confirm).then(function() {
+					//End game
+				}, function(){
+					//Continue game
+				});
+			}
+
+		}
 	}
 	
 	$scope.sortByScore = function () {
