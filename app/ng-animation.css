@@ -21,9 +21,9 @@
   transform: translateY(100vh);
   -ms-transform: translateY(100vh);
   -webkit-transform: translateY(100vh);
-  transition-duration: 500ms;
-  -webkit-transition-duration: 500ms;
-  opacity: 0;
+  transition-duration: 375ms;
+  -webkit-transition-duration: 375ms;
+  opacity: 1;
 }
 /* line 117, ../sass/ng-animation.scss */
 .slide-top.ng-enter-active {

@@ -28,18 +28,18 @@
 </div>
 
 <!-- use ng-repeat to get several components -->
-<div class="row addPointSpanner row-no-padding">
+<div class="row addPointSpanner row-no-padding" data-ng-init="checkAllFadeBtn()">
 	<div class="col-xs-12 col-no-padding" data-ng-repeat="p in players">
 		<div class="row playerName row-no-padding">{{p.name}}</div>
 
 		<div class="row pointRow row-no-padding"> <!-- think about all the cols from previous divs -->
 			<div class="col-xs-1"></div>
 			<div class="col-xs-2">
-				<div class="negButton glyphicon glyphicon-minus-sign" ng-click="fadeButton(p, 'negButton', hole)"><!--icon--></div><!--make id dynamic-->
+				<div class="negButton glyphicon glyphicon-minus-sign" ng-click="fadeButton(p, 'negButton')"><!--icon--></div><!--make id dynamic-->
 			</div>
 			<div class="points col-xs-6" id="{{players.indexOf(p)}}" ng-model=p.holes[hole]>{{p.holes[hole]}}<!--points--></div><!--make id dynamic-->
 			<div class="col-xs-2">
-				<div class="posButton glyphicon glyphicon-plus-sign" ng-click="fadeButton(p, 'posButton', hole)"><!--icon--></div><!--make id dynamic-->
+				<div class="posButton glyphicon glyphicon-plus-sign" ng-click="fadeButton(p, 'posButton')"><!--icon--></div><!--make id dynamic-->
 			</div>
 			<div class="col-xs-1"></div>
 		</div>

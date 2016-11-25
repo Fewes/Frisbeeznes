@@ -169,6 +169,21 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		});
 	}
 
+	$scope.checkAllFadeBtn = function () {
+		$timeout(function () {
+			for(var i = 0; i < $scope.players.length; i++){
+				var id = $scope.players.indexOf($scope.players[i]);
+
+				if($scope.players[i].holes[$scope.hole] == 0){
+					document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(191,191,191,0.2)";
+				}
+				else if($scope.players[i].holes[$scope.hole] == 8){
+					document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(191,191,191,0.2)";
+				}
+			}
+		});
+	}
+
 	/*Function to see if the value is 0 or the maximum allowed,
 	 if so fade the buttons and disable them*/
 	$scope.fadeButton = function (p, pressedBtn) {

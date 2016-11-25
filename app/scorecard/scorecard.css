@@ -107,6 +107,7 @@
 	left: 0;
 	z-index: 10;
 	display: none;
+	pointer-events: none;
 }
 
 .gradient-bottom {
@@ -120,4 +121,5 @@
 	top: calc(100vh - 2 * (100vw / 6) - 1px);
 	left: 0;
 	z-index: 10;
+	pointer-events: none;
 }
