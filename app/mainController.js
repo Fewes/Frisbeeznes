@@ -26,7 +26,14 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	}
 
 	$scope.holeChoice = function (hNum) {
-		$scope.hole = hNum;
+		if(hNum < 0){
+			$scope.hole = $scope.courseInfo.holes.length - 1;
+		}else if(hNum > $scope.courseInfo.holes.length - 1){
+			$scope.hole = 0;
+		}else{
+			$scope.hole = hNum;
+		}
+
 	}
 
 	$scope.goToPointPage = function () {
