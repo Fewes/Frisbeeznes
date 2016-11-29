@@ -7,6 +7,10 @@
 	margin:0 auto;
 }
 
+.topBtnScore{
+	height: 100%;
+}
+
 .glyphicon-chevron-left::before {
 	/*vertical-align: middle;*/
 	/*margin:0 auto;*/

@@ -85,13 +85,21 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		}
 	}
 
+	$scope.preventmarkPlayer = function () {
+		$scope.dontMarkPlayer = $scope.players.length;
+	}
+
 	$scope.markPlayer = function () {
-		$timeout(function () {
-			var elementet = document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0];
-			elementet.focus();
-			elementet.setSelectionRange(0, elementet.value.length);
-			document.getElementsByClassName("playerCont")[0].scrollTop = 10000; //Just a high value to ensure it´s always scrolls
-		})
+		if($scope.dontMarkPlayer > 0){
+			$scope.dontMarkPlayer -= 1;
+		}else{
+			$timeout(function () {
+				var elementet = document.getElementsByClassName("playerDiv")[$scope.players.length - 1].getElementsByClassName("nameText")[0];
+				elementet.focus();
+				elementet.setSelectionRange(0, elementet.value.length);
+				document.getElementsByClassName("playerCont")[0].scrollTop = 10000; //Just a high value to ensure it´s always scrolls
+			})
+		}
 	}
 
 	$scope.createPlayerName = function (testNum) {
@@ -106,11 +114,16 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	}
 
 	$scope.totalScore = function () {
+		$scope.totalPar = 0;
+		for(var k=0; k < $scope.courseInfo.holes.length; k++){
+			$scope.totalPar += parseInt($scope.courseInfo.holes[k].par);
+		}
 		for(var i = 0; i < $scope.players.length; i++){
 			$scope.players[i].score = 0;
 			for(var k = 0; k < $scope.players[i].holes.length; k++){
 				$scope.players[i].score += $scope.players[i].holes[k];
 			}
+			$scope.players[i].par = parseInt($scope.players[i].score - $scope.totalPar);
 		}
 	}
 
