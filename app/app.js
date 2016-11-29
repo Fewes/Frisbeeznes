@@ -13,6 +13,7 @@ angular.module('myApp', [
 	'myApp.result',
 	'myApp.firstpage',
 	'myApp.pointpage',
+	'myApp.pointpage1',
 	'myApp.mainmodule',
 	'myApp.read',
 	'myApp.playerpage',
