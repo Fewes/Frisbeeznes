@@ -1,9 +1,14 @@
-<div class="row menuSpanner">
+<!--<div class="row menuSpanner">
 	<div class="row menuTitle">
 		<a data-ng-click="animationTypeSelection('slide-left')" href="#!/playerpage" class="glyphicon glyphicon-chevron-left col-xs-1" style="display:table-cell; vertical-align: middle;"></a>
 		<div class="col-xs-7" style="display:table-cell;vertical-align: middle;">{{courseName}}</div>
 		<a data-ng-click="animationTypeSelection('slide-right')" href="#!/result" class="btn btn-danger col-xs-3" role="button" ng-click="sortByScore()">Avsluta Spel</a>
 	</div>
+</div>-->
+<div class="row menuSpanner">
+		<a data-ng-click="animationTypeSelection('slide-left')" href="#!/playerpage" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
+		<div class="text col-xs-7"><span>{{courseName}}</span></div>
+		<div class="col-xs-3 topBtnDiv"><a data-ng-click="animationTypeSelection('slide-right')" href="#!/result" class="btn btn-danger topBtnScore" role="button" ng-click="sortByScore()">Avsluta Spel</a></div>
 </div>
 
 <div class="row titleSpanner row-no-padding">
