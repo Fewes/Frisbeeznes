@@ -99,7 +99,8 @@
   transform: translateY(100vh);
   -ms-transform: translateY(100vh);
   -webkit-transform: translateY(100vh);
-  opacity: 0;
+  opacity: 1;
+  z-index:2;
 }
 
 /* ------------------------------------------- */
