@@ -1,12 +1,14 @@
 /* score card css stylesheet */
-.menuSpanner {
+/*.menuSpanner {
 	background-color: rgba(255, 255, 255, 0.25);
 	height:75px;
 	border-bottom:1px solid rgba(255, 255, 255, 0.5);
 	padding:17px;
 	margin:0 auto;
-}
+}*/
 
+
+/* Specific for this page */
 .topBtnScore{
 	height: 100%;
 }
@@ -86,9 +88,7 @@
 	font-size: calc(100vw / 6 * 0.3);
 }
 
-.row-no-padding {
-	margin:0;
-}
+s
 
 /*.row-no-padding {
 	margin-left: 0;

@@ -1,12 +1,12 @@
 /*The top bar that holds the menu */
-.menuBar{
+/*.menuBar{
 	background-color: rgba(255, 255, 255, 0.25);
 	height:75px;
 	border-bottom: solid white 2px;
 	padding-top:	25px;
 	padding-left: 	15px;
 	padding-right: 	15px;
-}
+}*/
 
 #btn-done{
 	background-color: green;
