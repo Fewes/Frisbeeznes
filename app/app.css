@@ -1,6 +1,7 @@
 /* app css stylesheet */
 body {
 	padding:0;
+	/*background-color: #FFFFFF;*/
 }
 
 .container-fluid {
@@ -11,11 +12,22 @@ body {
 
 /*For all pages*/
 .menuSpanner {
-	background-color: rgba(255, 255, 255, 0.25);
+	/*background-color: rgba(255, 255, 255, 0.25);*/
+	background-color: #466582;
 	height:75px;
 	border-bottom:1px solid rgba(255, 255, 255, 0.5);
 	padding:17px;
 	margin:0 auto;
+}
+
+a{
+	color: #df9a39;!important;
+}
+a:active{
+	color: #df9a39;!important;
+}
+a:focus{
+	color: #df9a39;!important;
 }
 
 .glyphicon-chevron-up {

@@ -52,7 +52,9 @@
 	/*top: -7px;
 	font-size: 5vw;*/
 	height: 100%;
-	background-color: #5bc0de;
+
+	background-color: rgba(0,255,0,0.2)
+	/*#5bc0de;*/
 }
 .lowerBtnDiv{
 	padding-left: 0px;
