@@ -138,6 +138,8 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	}
 
 	//work in progress
+	/* Function to see if all holes have been played, if not have a popup
+	to ask the user if they want to end the game */
 	$scope.allHolesPlayed = function(ev) {
 
 		console.log("funk");
