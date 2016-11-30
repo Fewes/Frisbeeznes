@@ -56,6 +56,13 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 
 	}
 
+	$scope.goToPage = function (page) {
+		$timeout(function () {
+			location.href = page;
+		})
+
+	}
+
 	//Reads in all the different coursenames
 	$scope.courseOptions = function () {
 		$scope.courseFileName = "courses";
@@ -105,6 +112,9 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 
 	$scope.preventmarkPlayer = function () {
 		$scope.dontMarkPlayer = $scope.players.length;
+		if($scope.players.length == 5){
+			document.getElementsByClassName("addSign")[0].style.color = "rgba(191,191,191,0.2)";
+		}
 	}
 
 	$scope.markPlayer = function () {
