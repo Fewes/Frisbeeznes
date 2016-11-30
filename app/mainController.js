@@ -23,6 +23,12 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		readFile.query({courseFileName: $scope.courseFileName},function(result){
 			$scope.courseInfo = result[0];
 		});
+
+
+		if(parseInt($scope.courseFileName.length) > parseInt(13)){
+			$scope.courseFileName = $scope.courseFileName.slice(0,12) + "...";
+			$scope.courseInfo.name = $scope.courseFileName;
+		}
 	}
 
 	$scope.holeChoice = function (hNum) {
@@ -79,7 +85,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		if($scope.players.length == 0){
 			$scope.btnActive = {"disabled":true};
 		}
-		document.getElementsByClassName("addSign")[0].style.color = "rgba(0,255,0,0.4)";
+		document.getElementsByClassName("addSign")[0].style.color = "rgb(75, 134, 75)";
 	}
 
 	//Add a plyer to the list
@@ -148,13 +154,13 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 						var className = document.getElementsByClassName("playerSquare");
 
 						if ($scope.courseInfo.holes[k].par < $scope.players[i].holes[k]) {
-							className[$scope.players.length*k+i].style.backgroundColor = "rgba(255,0,0,0.2)";
+							className[$scope.players.length*k+i].style.backgroundColor = "rgba(173, 59, 59, 0.66)";
 						}
 						else if ($scope.courseInfo.holes[k].par > $scope.players[i].holes[k]) {
-							className[$scope.players.length*k+i].style.backgroundColor = "rgba(0,255,0,0.2)";
+							className[$scope.players.length*k+i].style.backgroundColor = "rgba(0, 255, 0, 0.3)";
 						}
 						else if ($scope.courseInfo.holes[k].par == $scope.players[i].holes[k]) {
-							className[$scope.players.length*k+i].style.backgroundColor = "rgba(255, 255, 255, 0.25)";
+							className[$scope.players.length*k+i].style.backgroundColor = "rgba(219, 213, 63, 0.59)";
 						}
 					}
 				}
@@ -227,12 +233,12 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		if(p.holes[$scope.hole] > 0 && classLoc == "negButton"){
 			//document.getElementById(id).textContent = "" + (numberOfThrows - 1);
 			--p.holes[$scope.hole];
-			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgba(0,255,0,0.2)";
+			document.getElementById(id).parentNode.getElementsByClassName("posButton")[0].style.color = "rgb(75, 134, 75)";
 		}
 		else if(p.holes[$scope.hole] < 8 && classLoc == "posButton") {
 			//document.getElementById(id).textContent = "" + (numberOfThrows + 1);
 			++p.holes[$scope.hole];
-			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgba(255,0,0,0.2)";
+			document.getElementById(id).parentNode.getElementsByClassName("negButton")[0].style.color = "rgb(185, 66, 66)";
 		}
 
 		if(p.holes[$scope.hole] == 0){

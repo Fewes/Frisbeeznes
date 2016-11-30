@@ -4,6 +4,10 @@
     border-bottom:1px solid rgba(255, 255, 255, 0.5);
     padding-top:25px;
 }*/
+.holeUppertext{
+	font-size: 25px;
+}
+
 .trackCont {
 	height: calc(100vh - 75px);
 }
@@ -18,11 +22,10 @@
 }
 
 .infoText {
+	padding-top: 20px;
 	height: calc(100vh - 50vh - 75px);
 }
 .holeText {
-	padding-top: 20px;
-	padding-bottom: 20px;
 	padding-left: 0px;
 	padding-right: 0px;
 	font-size: 2em;

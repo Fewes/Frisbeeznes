@@ -1,7 +1,8 @@
 <div class="menuSpanner">
-	<a data-ng-click="animationTypeSelection('slide-left')" href="#!/tracks" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
-	<div class="text col-xs-7" ><span>{{courseInfo.name}}</span></div>
-	<div class="col-xs-3 topBtnDiv"><a data-ng-click="animationTypeSelection('slide-right')" href="#!/playerpage" data-ng-click="reWritePlayers()" class="btn btn-default topBtntrack" role="button">Välj spelare</a></div>
+	<div class="borderAroundpoint" onclick="location.href='#!/tracks'" data-ng-click="animationTypeSelection('slide-left')"></div>
+	<a class="nonclickglyph glyphicon glyphicon-chevron-left col-xs-1"></a>
+	<div class="text col-xs-7" ><span>{{courseFileName}}</span></div>
+	<div class="col-xs-3 topBtnDiv"><a data-ng-click="animationTypeSelection('slide-right')" href="#!/playerpage" data-ng-click="reWritePlayers()" class="btn btn-default topBtntrack topBtnShadow" role="button">Välj spelare</a></div>
 </div>
 
 <div class="trackCont">

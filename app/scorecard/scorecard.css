@@ -37,9 +37,9 @@
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
 	width: 0px;  /* remove scrollbar space */
-}
+/*}*/
 
 .titleSpanner {
 	height: calc(100vw / 6);

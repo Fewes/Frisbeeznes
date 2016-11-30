@@ -60,6 +60,13 @@
 	padding-left: 0px;
 }
 
+.lowerBtnDiv a{
+	border: solid 1px black;
+	border-radius: 6px;
+	box-shadow: 2px 2px 1px #101f2d;
+	background-color: rgb(70, 138, 205);
+}
+
 .topBtnDiv{
 	height: 100%;
 }

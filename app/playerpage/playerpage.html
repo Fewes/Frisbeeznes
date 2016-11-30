@@ -1,7 +1,9 @@
 <div class="menuSpanner">
-	<a data-ng-click="animationTypeSelection('slide-left')" href="#!/trackpage" class="glyphicon glyphicon-chevron-left col-xs-1"></a>
+	<div class="borderAroundpoint" onclick="location.href='#!/trackpage'" data-ng-click="animationTypeSelection('slide-left')"></div>
+	<!--<div class="borderAroundpoint" onclick="location.href='#!/trackpage'" data-ng-click="animationTypeSelection('slide-left')"></div>-->
+	<a class="glyphicon glyphicon-chevron-left col-xs-1"></a>
 	<div class="text col-xs-7"><span>Spelare</span></div>
-	<div class="col-xs-3 topBtnDiv"><a data-ng-click="animationTypeSelection('slide-right')" href="#!/scorecard" ng-class="btnActive" class="btn btn-default topBtn topBtnStart">Starta</a></div>
+	<div class="col-xs-3 topBtnDiv "><a data-ng-click="animationTypeSelection('slide-right')" href="#!/scorecard" ng-class="btnActive" class="btn btn-default topBtn topBtnStart topBtnShadow">Starta</a></div>
 </div>
 
 <div class="playerCont" data-ng-init="preventmarkPlayer()">
@@ -13,7 +15,7 @@
 			<div class="removeInnerDiv glyphicon glyphicon-minus-sign" ng-click="removePlayer(p)"></div>
 		</div>
 	</div>
-	<div class="addSign glyphicon glyphicon-plus-sign" ng-click="addPlayer()"> </div>
+	<div class="underAddSign"><div class="addSign glyphicon glyphicon-plus-sign" ng-click="addPlayer()"> </div></div>
 
 </div>
 

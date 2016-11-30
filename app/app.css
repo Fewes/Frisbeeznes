@@ -13,9 +13,10 @@ body {
 /*For all pages*/
 .menuSpanner {
 	/*background-color: rgba(255, 255, 255, 0.25);*/
+	box-shadow: 0px 2px 3px #2a2a2c;
 	background-color: #466582;
 	height:75px;
-	border-bottom:1px solid rgba(255, 255, 255, 0.5);
+	/*border-bottom:1px solid rgba(255, 255, 255, 0.5);*/
 	padding:17px;
 	margin:0 auto;
 }
@@ -25,9 +26,11 @@ a{
 }
 a:active{
 	color: #df9a39;!important;
+	text-decoration: none;
 }
 a:focus{
 	color: #df9a39;!important;
+	text-decoration: none;
 }
 
 .glyphicon-chevron-up {
@@ -96,3 +99,36 @@ a:focus{
 	position: absolute;
 	width: 100vw;
 }
+
+.borderAroundpoint{
+	border: solid #375067 2px;
+	border-radius: 6px;
+	width: 40px;
+	height: 40px;
+	left: 26px;
+	top: 14px;
+	position: absolute;
+	box-shadow: 1px 1px 1px #2b2b2b;
+	/*pointer-events: none;*/
+}
+
+.borderAroundpoint:active, .borderAroundpoint:focus{
+	box-shadow: 0px 0px 1px #375067;
+	background-color: #375067;
+}
+
+.text{
+	padding-left: 25px;
+	padding-right: -25px;
+}
+
+.topBtnShadow{
+	border: solid #375067 1px;
+	border-radius: 6px;
+	box-shadow: 2px 2px 1px #2b2b2b;
+}
+
+.nonclickglyph{
+	pointer-events: none;
+}
+

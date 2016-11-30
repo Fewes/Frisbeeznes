@@ -1,6 +1,6 @@
 <!-- add slide down animation on whole page -->
 
-<div style="width:100%;height:100%;background-color:#2b3e50;z-index:2;">
+<div style="width:100%;height:100vh;background-color:#2b3e50;z-index:2;">
 
 <div class="topBar"><div class="topBarItem">
 	<a href="#!/scorecard" class="glyphicon glyphicon-chevron-down" data-ng-click="animationTypeSelection('slide-down'); totalScore()"><!--icon --></a>
@@ -8,11 +8,13 @@
 
 <div class="row menuSpannerTall row-no-padding">
 	<div class="menuSpannerControlsContainer">
-		<a data-ng-click="animationTypeSelection('slide-left'); goToPointPage(); holeChoice(hole - 1)" class="col-xs-3 glyphicon glyphicon-chevron-left"><!--icon --></a>
+		<div class="borderAroundArrowLeft" data-ng-click="animationTypeSelection('slide-left'); goToPointPage(); holeChoice(hole - 1)" ></div>
+		<a class="col-xs-3 nonclickglyph glyphicon glyphicon-chevron-left"><!--icon --></a>
 		<div class="col-xs-6">
 			<div class="row holeInfo"><div class="holeInfoInside">HÅL&nbsp{{hole + 1}}</div></div>
 		</div>
-		<a data-ng-click="animationTypeSelection('slide-right'); goToPointPage(); holeChoice(hole + 1)" class="col-xs-3 glyphicon glyphicon-chevron-right"><!--icon --></a>
+		<div class="borderAroundArrowRight" data-ng-click="animationTypeSelection('slide-right'); goToPointPage(); holeChoice(hole + 1)"></div>
+		<a  class="col-xs-3 nonclickglyph glyphicon glyphicon-chevron-right"><!--icon --></a>
 	</div>
 	<div class="menuSpannerImageContainer"><div class="menuSpannerImage"></div></div>
 	<div class="menuSpannerImageInfoboxPositioner">
