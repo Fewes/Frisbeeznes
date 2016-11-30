@@ -79,6 +79,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 		if($scope.players.length == 0){
 			$scope.btnActive = {"disabled":true};
 		}
+		document.getElementsByClassName("addSign")[0].style.color = "rgba(0,255,0,0.4)";
 	}
 
 	//Add a plyer to the list
@@ -89,6 +90,9 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 			$scope.players.push({name:okPName, holes:[], score:0});
 			for (var i = 0; i < $scope.courseInfo.holes.length; i++) {
 				$scope.players[$scope.players.length-1].holes[i] = 0;
+			}
+			if($scope.players.length == 5){
+				document.getElementsByClassName("addSign")[0].style.color = "rgba(191,191,191,0.2)";
 			}
 		}
 	}
@@ -242,11 +246,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	//Runs when the controller loads
 	$scope.courseOptions();
 	$scope.animationTypeClass = "slide-right";
-
-	//$scope.courseChoice("de_dust_2");
-
 	$scope.players = [];
-	//$scope.players.push({name:'Player 1', holes:[], score:1337});
 	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
 	//to plesure felix
