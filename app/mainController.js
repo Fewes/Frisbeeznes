@@ -131,9 +131,9 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	}
 
 	$scope.createPlayerName = function (testNum) {
-		var temp = ('Player ' + testNum);
+		var temp = ('Spelare ' + testNum);
 		for(var i = 0; i < $scope.players.length; i++){
-			if($scope.players[i].name == ('Player ' + testNum)){
+			if($scope.players[i].name == ('Spelare ' + testNum)){
 				temp = $scope.createPlayerName(testNum + 1);
 				break;
 			}
@@ -266,7 +266,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
 	//to plesure felix
-		$scope.courseOptions();
+	/*	$scope.courseOptions();
 		$scope.courseChoice("de_dust2");
 
 		$timeout(function () {
@@ -277,7 +277,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 			$scope.addPlayer();
 			$scope.addPlayer();
 		});
-
+*/
 
 }]);
 
