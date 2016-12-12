@@ -214,7 +214,8 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	};
 	
 	$scope.sortByScore = function () {
-		$scope.players.sort(function(a, b){
+		angular.copy($scope.players, $scope.playersTotal);
+		$scope.playersTotal.sort(function(a, b){
 			return a.score-b.score;
 		});
 	}
@@ -263,6 +264,7 @@ app.controller('mainCtrl', ["$scope", "readFile", '$anchorScroll', '$location', 
 	$scope.courseOptions();
 	$scope.animationTypeClass = "slide-right";
 	$scope.players = [];
+	$scope.playersTotal = [];
 	$scope.btnActive = {"disabled":true}; //Setting the start button to disabled at start in playerpage
 
 	//to plesure felix
